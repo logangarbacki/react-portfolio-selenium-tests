@@ -23,27 +23,23 @@ namespace SeleniumTestFramework
                 if (driver.Url.Contains("#about"))
                 {
                     Console.WriteLine("✅ Test Passed: URL contains #about");
-                    Environment.Exit(0); // success
-                    driver.Quit();
-                    driver.Dispose();
                 }
                 else
                 {
                     Console.WriteLine("❌ Test Failed: URL does NOT contain #about");
-                    driver.Quit();
-                    driver.Dispose();
+                    Environment.Exit(1);
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("❌ Test Failed: " + ex.Message);
-                Environment.Exit(1); // fail
+                Environment.Exit(1);
             }
             finally
             {
                 driver?.Quit();
+                driver?.Dispose();
             }
         }
     }
-    
 }
