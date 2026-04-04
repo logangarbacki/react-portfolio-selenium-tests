@@ -1,6 +1,5 @@
 using OpenQA.Selenium;
 using System;
-using System.Threading;
 
 namespace SeleniumTestFramework
 {
@@ -24,16 +23,19 @@ namespace SeleniumTestFramework
                 if (driver.Url.Contains("#about"))
                 {
                     Console.WriteLine("✅ Test Passed: URL contains #about");
-                    driver?.Quit();
+                    Environment.Exit(0); // success
+                    Driver.Quit();
                 }
                 else
                 {
                     Console.WriteLine("❌ Test Failed: URL does NOT contain #about");
+                    Environment.Exit(1); // fail
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("❌ Test Failed: " + ex.Message);
+                Environment.Exit(1); // fail
             }
             finally
             {
