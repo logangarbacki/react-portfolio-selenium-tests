@@ -1,29 +1,36 @@
-name: Run Navbar Selenium Test
+name: Selenium UI Tests
 
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
+  repository_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
-  selenium-tests:
+  run-selenium-tests:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout Selenium Tests Repo
+        uses: actions/checkout@v3
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 8.0.x
+      - name: Checkout React Portfolio Repo
+        uses: actions/checkout@v3
+        with:
+          repository: logangarbacki/react-portfolio-website
+          token: ${{ secrets.PORTFOLIO_REPO_PAT }}
+          path: portfolio
 
-    - name: Restore dependencies
-      run: dotnet restore ./SeleniumTestFramework.csproj
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Build project
-      run: dotnet build ./SeleniumTestFramework.csproj --no-restore
+      - name: Restore Dependencies
+        run: dotnet restore ./SeleniumTestFramework/SeleniumTestFramework.csproj
 
-    - name: Run Selenium tests
-      run: dotnet run --project ./SeleniumTestFramework.csproj
+      - name: Build Selenium Project
+        run: dotnet build --no-restore ./SeleniumTestFramework/SeleniumTestFramework.csproj
+
+      - name: Run Selenium Tests
+        run: dotnet run --project ./SeleniumTestFramework/SeleniumTestFramework.csproj
