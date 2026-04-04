@@ -1,8 +1,11 @@
 name: Selenium UI Tests
 
 on:
+  workflow_dispatch:
   repository_dispatch:
     types: [run-selenium-tests]
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   run-selenium-tests:
@@ -25,10 +28,10 @@ jobs:
           dotnet-version: '8.0.x'
 
       - name: Restore Dependencies
-        run: dotnet restore ./SeleniumTestFramework/SeleniumTestFramework.csproj
+        run: dotnet restore ./SeleniumTestFramework.csproj
 
       - name: Build Selenium Project
-        run: dotnet build --no-restore ./SeleniumTestFramework/SeleniumTestFramework.csproj
+        run: dotnet build --no-restore ./SeleniumTestFramework.csproj
 
       - name: Run Selenium Tests
-        run: dotnet run --project ./SeleniumTestFramework/SeleniumTestFramework.csproj
+        run: dotnet run --project ./SeleniumTestFramework.csproj
