@@ -8,8 +8,10 @@ namespace SeleniumTestFramework
         public static IWebDriver CreateChromeDriver()
         {
             var options = new ChromeOptions();
-            options.AddArgument("--start-maximized"); // visible browser
-            // do NOT add "--headless"
+            options.AddArgument("--headless");
+            options.AddArgument("--disable-gpu");         
+            options.AddArgument("--window-size=1920,1080"); 
+            options.AddArgument("--no-sandbox");          
             return new ChromeDriver(options);
         }
     }
