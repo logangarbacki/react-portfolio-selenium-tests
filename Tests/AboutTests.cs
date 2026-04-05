@@ -13,7 +13,10 @@ namespace SeleniumTestFramework
         public void SetUp()
         {
             _about = new AboutPage(Driver);
-            ((IJavaScriptExecutor)Driver).ExecuteScript("arguments[0].scrollIntoView({behavior:'instant'});", _about.Heading);
+            ((IJavaScriptExecutor)Driver).ExecuteScript(
+                "arguments[0].scrollIntoView({behavior:'instant'});", 
+                _about.Heading
+            );
         }
 
         [Test, Category("Smoke")]
