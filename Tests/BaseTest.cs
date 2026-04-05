@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 
 namespace SeleniumTestFramework
 {
+    [Parallelizable(ParallelScope.Fixtures)]
     public abstract class BaseTest
     {
         protected IWebDriver Driver;
@@ -21,18 +22,9 @@ namespace SeleniumTestFramework
         [TearDown]
         public void BaseTearDown()
         {
-            if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
-            {
-                DriverUtils.TakeScreenshot(Driver, TestContext.CurrentContext.Test.Name);
-            }
 
             Driver?.Quit();
             Driver?.Dispose();
-
-            foreach (var p in System.Diagnostics.Process.GetProcessesByName("chromedriver"))
-            {
-                try { p.Kill(); } catch { }
-            }
         }
     }
 }
