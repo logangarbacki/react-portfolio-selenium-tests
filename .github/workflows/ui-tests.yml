@@ -7,7 +7,7 @@ on:
   repository_dispatch:
     types: [run-selenium-tests]
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # Daily at midnight UTC
 
 jobs:
   run-selenium-tests:
@@ -34,6 +34,9 @@ jobs:
 
       - name: Build Selenium Project
         run: dotnet build --no-restore ./SeleniumTestFramework.csproj
+
+      - name: Setup ChromeDriver
+        run: dotnet tool install Selenium.WebDriver.ChromeDriver --version 118.* --tool-path ./tools
 
       - name: Run Selenium Tests
         run: dotnet test ./SeleniumTestFramework.csproj --logger "console;verbosity=normal"
