@@ -1,4 +1,5 @@
 using OpenQA.Selenium;
+using SeleniumTestFramework;
 
 public class NavbarPage
 {
@@ -9,8 +10,8 @@ public class NavbarPage
         _driver = driver;
     }
 
-    public IWebElement AboutLink => _driver.FindElement(By.CssSelector("a[href*='#about']"));
-    public IWebElement ContactLink => _driver.FindElement(By.CssSelector("a[href*='#contact']"));
+    public IWebElement AboutLink => DriverUtils.Find(_driver, By.CssSelector("a[href*='#about']"));
+    public IWebElement ContactLink => DriverUtils.Find(_driver, By.CssSelector("a[href*='#contact']"));
     
     public void ClickAbout() => AboutLink.Click();
     public void ClickContact() => ContactLink.Click();

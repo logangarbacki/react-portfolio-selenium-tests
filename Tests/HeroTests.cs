@@ -40,7 +40,7 @@ namespace SeleniumTestFramework
         }
 
         [Test, Category("Regression")]
-        public void HeroTechStack_ContainsExpectedTechnologies()
+        public void HeroTechStack_ContainsExpected()
         {
             var text = _hero.TechStack.Text;
             Assert.That(text, Does.Contain("Selenium"));

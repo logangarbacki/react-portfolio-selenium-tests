@@ -1,5 +1,6 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace SeleniumTestFramework
@@ -18,5 +19,19 @@ namespace SeleniumTestFramework
             service.HideCommandPromptWindow = true;
             return new ChromeDriver(service, options);
         }
+        public static IWebElement Find(IWebDriver driver, By by, int timeoutSeconds = 10)
+        {
+            var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutSeconds));
+
+            var element = wait.Until(d => d.FindElement(by));
+
+            ((IJavaScriptExecutor)driver).ExecuteScript(
+                "arguments[0].scrollIntoView({behavior:'instant', block:'center'});", element);
+
+            wait.Until(d => !string.IsNullOrEmpty(element.Text));
+
+            return element;
+        }
+        
     }
 }
