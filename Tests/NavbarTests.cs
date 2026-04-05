@@ -1,45 +1,38 @@
-using OpenQA.Selenium;
+using NUnit.Framework;
+using OpenQA.Selenium.Support.UI;
 using System;
 
 namespace SeleniumTestFramework
 {
-    class NavbarTests
+    [TestFixture]
+    public class NavbarTests : BaseTest
     {
-        static void Main()
+        private NavbarPage _navbarPage;
+
+        [SetUp]
+        public void SetUp()
         {
-            IWebDriver driver = null;
+            _navbarPage = new NavbarPage(Driver);
+        }
 
-            try
-            {
-                driver = DriverUtils.CreateChromeDriver();
-                driver.Navigate().GoToUrl("https://www.logangarbacki.dev");
+        [Test]
+        [Category("Smoke")]
+        public void ClickingAboutLink_NavigatesToAboutSection()
+        {
+            _navbarPage.ClickAbout();
+            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            wait.Until(d => d.Url.Contains("#about"));
+            Assert.That(Driver.Url, Does.Contain("#about"));
+        }
 
-                Console.WriteLine("Browser opened, navigating to site...");
-
-                var aboutLink = driver.FindElement(By.CssSelector("a[href='#about']"));
-                aboutLink.Click();
-                Console.WriteLine("Clicked About link");
-
-                if (driver.Url.Contains("#about"))
-                {
-                    Console.WriteLine("✅ Test Passed: URL contains #about");
-                }
-                else
-                {
-                    Console.WriteLine("❌ Test Failed: URL does NOT contain #about");
-                    Environment.Exit(1);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("❌ Test Failed: " + ex.Message);
-                Environment.Exit(1);
-            }
-            finally
-            {
-                driver?.Quit();
-                driver?.Dispose();
-            }
+        [Test]
+        [Category("Smoke")]
+        public void ClickingContactLink_NavigatesToContactSection()
+        {
+            _navbarPage.ClickContact();
+            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            wait.Until(d => d.Url.Contains("#contact"));
+            Assert.That(Driver.Url, Does.Contain("#contact"));
         }
     }
 }

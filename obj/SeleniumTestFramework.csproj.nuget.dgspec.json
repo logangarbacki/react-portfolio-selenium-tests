@@ -50,13 +50,25 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Selenium.WebDriver": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.14.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "Selenium.Support": {
               "target": "Package",
               "version": "[4.13.0, )"
             },
-            "Selenium.WebDriver.ChromeDriver": {
+            "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[117.0.5938.6200, )"
+              "version": "[4.13.0, )"
             }
           },
           "imports": [
@@ -73,10 +85,6 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
               "version": "[8.0.25, 8.0.25]"
             },
             {
