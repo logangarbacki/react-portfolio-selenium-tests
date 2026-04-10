@@ -32,7 +32,7 @@ namespace SeleniumTestFramework
         public void HeroEyebrow_ContainsJobTitle() =>
             Assert.That(_hero.Eyebrow.Text, Does.Contain("QA Engineer").IgnoreCase);
 
-        [Test, Category("Regression")]
+        [Test, Category("Smoke")]
         public void HeroTagline_IsVisible() =>
             Assert.That(_hero.Tagline.Displayed, Is.True);
 

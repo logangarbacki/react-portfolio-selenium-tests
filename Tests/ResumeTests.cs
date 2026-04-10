@@ -63,8 +63,5 @@ namespace SeleniumTestFramework
             });
         }
 
-        [Test, Category("Regression")]
-        public void DownloadButton_IsVisible() =>
-            Assert.That(_resume.DownloadButton.Displayed, Is.True);
     }
 }

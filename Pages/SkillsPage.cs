@@ -19,7 +19,7 @@ namespace SeleniumTestFramework.Pages
 
         public int GetCertCount()
         {
-            CertsSection.GetAttribute("class"); 
+            _ = CertsSection.Displayed; // triggers scroll-reveal before counting
             return _driver.FindElements(By.CssSelector(".cert-row")).Count;
         }
     }

@@ -20,14 +20,6 @@ namespace SeleniumTestFramework
         public void NavStatusButton_IsVisible() =>
             Assert.That(_navbar.StatusButton.Displayed, Is.True);
 
-        [Test, Category("Regression")]
-        public void NavLogo_LinksToHome() =>
-            Assert.That(_navbar.Logo.GetAttribute("href"), Does.Contain("#home").IgnoreCase);
-
-        [Test, Category("Regression")]
-        public void NavStatusButton_ShowsAvailability() =>
-            Assert.That(_navbar.StatusButton.Text, Does.Contain("available").IgnoreCase);
-
         [Test, Category("Smoke")]
         [TestCase(NavSection.About)]
         [TestCase(NavSection.Projects)]
@@ -42,5 +34,13 @@ namespace SeleniumTestFramework
             Assert.That(_navbar.IsSectionVisible(section), Is.True);
             Assert.That(Driver.Url, Does.Contain(section.ToString()).IgnoreCase);
         }
+
+        [Test, Category("Regression")]
+        public void NavLogo_LinksToHome() =>
+            Assert.That(_navbar.Logo.GetAttribute("href"), Does.Contain("#home").IgnoreCase);
+
+        [Test, Category("Regression")]
+        public void NavStatusButton_ShowsAvailability() =>
+            Assert.That(_navbar.StatusButton.Text, Does.Contain("available").IgnoreCase);
     }
 }

@@ -19,9 +19,6 @@ namespace SeleniumTestFramework
             service.HideCommandPromptWindow = true;
             return new ChromeDriver(service, options);
         }
-
-        // Scrolls into view on each retry so IntersectionObserver-gated elements
-        // (visibility:hidden until in-viewport) become Displayed before we return them.
         public static IWebElement Find(IWebDriver driver, By by, int timeoutSeconds = 10)
         {
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutSeconds));
