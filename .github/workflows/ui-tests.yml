@@ -45,14 +45,14 @@ jobs:
           ALLURE_RESULTS_DIRECTORY: allure-results
 
       - name: List allure-results
-        run: dir allure-results || echo "allure-results not found"
+        run: dir bin/Debug/net8.0/allure-results || echo "allure-results not found"
         continue-on-error: true
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline
 
       - name: Generate Allure Report
-        run: allure generate allure-results --clean -o allure-report
+        run: allure generate bin/Debug/net8.0/allure-results --clean -o allure-report
 
       - name: Upload Allure Report
         uses: actions/upload-artifact@v4
