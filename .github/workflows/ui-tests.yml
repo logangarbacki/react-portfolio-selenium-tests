@@ -42,8 +42,18 @@ jobs:
         run: dotnet test ./SeleniumTestFramework.csproj --logger "console;verbosity=normal"
         continue-on-error: true
 
-      - name: List allure-results
-        run: dir bin\Debug\net8.0\allure-results || echo "allure-results not found"
+      - name: Fetch Allure history from gh-pages
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: gh-pages
+        continue-on-error: true
+
+      - name: Copy history into results
+        run: |
+          if (Test-Path "gh-pages\history") {
+            Copy-Item -Recurse -Force "gh-pages\history" "bin\Debug\net8.0\allure-results\history"
+          }
         continue-on-error: true
 
       - name: Install Allure CLI
