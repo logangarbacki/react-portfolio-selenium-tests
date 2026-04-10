@@ -44,5 +44,9 @@ namespace SeleniumTestFramework
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutSeconds));
             wait.Until(d => d.Url.Contains(fragment, StringComparison.OrdinalIgnoreCase));
         }
+
+        public static string GetInnerText(IWebDriver driver, IWebElement element) =>
+            ((IJavaScriptExecutor)driver).ExecuteScript("return arguments[0].innerText;", element)
+                as string ?? string.Empty;
     }
 }

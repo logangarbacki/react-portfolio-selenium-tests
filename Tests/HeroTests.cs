@@ -25,8 +25,11 @@ namespace SeleniumTestFramework
             Assert.That(_hero.DownloadResumeButton.Displayed, Is.True);
 
         [Test, Category("Regression")]
-        public void HeroTitle_ContainsName() =>
-            Assert.That(_hero.Title.Text, Does.Contain("Logan").And.Contain("Garbacki"));
+        public void HeroTitle_ContainsName()
+        {
+            var text = DriverUtils.GetInnerText(Driver, _hero.Title);
+            Assert.That(text, Does.Contain("Logan").And.Contain("Garbacki"));
+        }
 
         [Test, Category("Regression")]
         public void HeroEyebrow_ContainsJobTitle() =>
