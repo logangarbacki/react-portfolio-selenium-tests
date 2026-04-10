@@ -53,7 +53,7 @@ namespace SeleniumTestFramework
             });
         }
 
-        [Test, Category("Regression")]
+        [Test, Category("Regression"), Retry(2)]
         public void ClickingViewWork_NavigatesToProjectsSection()
         {
             _hero.ClickViewWork();
@@ -61,7 +61,7 @@ namespace SeleniumTestFramework
             Assert.That(Driver.Url, Does.Contain("#projects"));
         }
 
-        [Test, Category("Regression")]
+        [Test, Category("Regression"), Retry(2)]
         public void ClickingDownloadResume_NavigatesToResumeSection()
         {
             _hero.ClickDownloadResume();

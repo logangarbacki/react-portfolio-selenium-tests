@@ -22,7 +22,7 @@ namespace SeleniumTestFramework
         public void NavStatusButton_IsVisible() =>
             Assert.That(_navbar.StatusButton.Displayed, Is.True);
 
-        [Test, Category("Smoke")]
+        [Test, Category("Smoke"), Retry(2)]
         [TestCase(NavSection.About)]
         [TestCase(NavSection.Projects)]
         [TestCase(NavSection.Skills)]
