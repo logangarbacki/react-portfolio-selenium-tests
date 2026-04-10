@@ -1,38 +1,30 @@
 using NUnit.Framework;
-using OpenQA.Selenium.Support.UI;
-using System;
+using SeleniumTestFramework.Pages;
+using SeleniumTestFramework.Enums;
 
 namespace SeleniumTestFramework
 {
     [TestFixture]
     public class NavbarTests : BaseTest
     {
-        private NavbarPage _navbarPage;
+        private NavbarPage _navbar;
 
         [SetUp]
-        public void SetUp()
-        {
-            _navbarPage = new NavbarPage(Driver);
-        }
+        public void SetUp() => _navbar = new NavbarPage(Driver);
 
-        [Test]
-        [Category("Smoke")]
-        public void ClickingAboutLink_NavigatesToAboutSection()
+        [Test, Category("Smoke")]
+        [TestCase(NavSection.About)]
+        [TestCase(NavSection.Projects)]
+        [TestCase(NavSection.Skills)]
+        [TestCase(NavSection.Resume)]
+        [TestCase(NavSection.Contact)]
+        public void Navigation_Works_For_All_Sections(NavSection section)
         {
-            _navbarPage.ClickAbout();
-            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
-            wait.Until(d => d.Url.Contains("#about"));
-            Assert.That(Driver.Url, Does.Contain("#about"));
-        }
+            _navbar.ClickNavLink(section);
+            DriverUtils.WaitForUrlContains(Driver, section.ToString().ToLower());
 
-        [Test]
-        [Category("Smoke")]
-        public void ClickingContactLink_NavigatesToContactSection()
-        {
-            _navbarPage.ClickContact();
-            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
-            wait.Until(d => d.Url.Contains("#contact"));
-            Assert.That(Driver.Url, Does.Contain("#contact"));
+            Assert.That(_navbar.IsSectionVisible(section), Is.True);
+            Assert.That(Driver.Url, Does.Contain(section.ToString()).IgnoreCase);
         }
     }
 }

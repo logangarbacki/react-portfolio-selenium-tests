@@ -1,20 +1,35 @@
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using SeleniumTestFramework;
+using SeleniumTestFramework.Enums;
 
-public class NavbarPage
+namespace SeleniumTestFramework.Pages
 {
-    private IWebDriver _driver;
-
-    public NavbarPage(IWebDriver driver)
+    public class NavbarPage
     {
-        _driver = driver;
+        private readonly IWebDriver _driver;
+
+        public NavbarPage(IWebDriver driver) => _driver = driver;
+
+        public IWebElement NavMenu => DriverUtils.Find(_driver, By.CssSelector("nav.navbar"));
+
+        public void ClickNavLink(NavSection section)
+        {
+            var link = NavMenu.FindElement(By.CssSelector($"a[href='#{section.ToString().ToLower()}']"));
+            link.Click();
+        }
+
+        public bool IsSectionVisible(NavSection section)
+        {
+            try
+            {
+                var element = DriverUtils.Find(_driver, By.CssSelector($"section#{section.ToString().ToLower()}"));
+                return element.Displayed;
+            }
+            catch (WebDriverTimeoutException)
+            {
+                return false;
+            }
+        }
     }
-
-    public IWebElement AboutLink => DriverUtils.Find(_driver, By.CssSelector("a[href*='#about']"));
-    public IWebElement ContactLink => DriverUtils.Find(_driver, By.CssSelector("a[href*='#contact']"));
-    
-    public void ClickAbout() => AboutLink.Click();
-    public void ClickContact() => ContactLink.Click();
-    
 }
-
