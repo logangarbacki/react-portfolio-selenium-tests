@@ -5,6 +5,7 @@ using SeleniumTestFramework.Enums;
 namespace SeleniumTestFramework
 {
     [TestFixture]
+    [Allure.NUnit.AllureNUnit]
     [Allure.NUnit.Attributes.AllureSuite("Navbar")]
     public class NavbarTests : BaseTest
     {

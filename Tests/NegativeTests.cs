@@ -6,6 +6,7 @@ using System.Linq;
 namespace SeleniumTestFramework
 {
     [TestFixture]
+    [Allure.NUnit.AllureNUnit]
     [Allure.NUnit.Attributes.AllureSuite("Negative")]
     public class NegativeTests : BaseTest
     {

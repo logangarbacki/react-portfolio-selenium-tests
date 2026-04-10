@@ -4,6 +4,7 @@ using SeleniumTestFramework.Pages;
 namespace SeleniumTestFramework
 {
     [TestFixture]
+    [Allure.NUnit.AllureNUnit]
     [Allure.NUnit.Attributes.AllureSuite("Resume")]
     public class ResumeTest : BaseTest
     {
