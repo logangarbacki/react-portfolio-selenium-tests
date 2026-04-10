@@ -6,7 +6,6 @@ using Allure.Net.Commons;
 
 namespace SeleniumTestFramework
 {
-    [Allure.NUnit.AllureNUnit]
     [Parallelizable(ParallelScope.Fixtures)]
     public abstract class BaseTest
     {
