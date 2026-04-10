@@ -4,6 +4,7 @@ using SeleniumTestFramework.Pages;
 namespace SeleniumTestFramework
 {
     [TestFixture]
+    [Allure.NUnit.Attributes.AllureSuite("Projects")]
     public class ProjectsTests : BaseTest
     {
         private ProjectsPage _projects;

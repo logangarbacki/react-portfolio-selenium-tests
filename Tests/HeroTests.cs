@@ -4,6 +4,7 @@ using SeleniumTestFramework.Pages;
 namespace SeleniumTestFramework
 {
     [TestFixture]
+    [Allure.NUnit.Attributes.AllureSuite("Hero")]
     public class HeroTests : BaseTest
     {
         private HeroPage _hero;

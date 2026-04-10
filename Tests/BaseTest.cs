@@ -2,11 +2,11 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
 using System.IO;
-using NUnit.Framework.Interfaces;
 using Allure.Net.Commons;
 
 namespace SeleniumTestFramework
 {
+    [Allure.NUnit.AllureNUnit]
     [Parallelizable(ParallelScope.Fixtures)]
     public abstract class BaseTest
     {

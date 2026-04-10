@@ -5,6 +5,7 @@ using SeleniumTestFramework.Enums;
 namespace SeleniumTestFramework
 {
     [TestFixture]
+    [Allure.NUnit.Attributes.AllureSuite("E2E")]
     public class UserFlowTests : BaseTest
     {
         private HeroPage _hero;
