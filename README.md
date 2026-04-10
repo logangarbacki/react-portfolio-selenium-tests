@@ -1,29 +1,58 @@
-# selenium-tests (logangarbacki.dev)
+# Selenium UI Test Automation Framework (C# / NUnit)
 
-UI test suite for https://logangarbacki.dev
+This is a UI automation framework I built to test my live portfolio site:
+👉 https://logangarbacki.dev
 
-Small Selenium + NUnit project written in C# that runs basic end-to-end checks against the live site.  
-It’s connected to GitHub Actions so tests run automatically whenever the main site repo is updated.
+The goal was to simulate a real-world QA setup by validating that core pages load correctly, key elements are present, and the UI remains stable across deployments.
 
+---
 
-## what this is
+## 🚀 What this tests
 
-This isn’t a full-blown test framework. It’s just a lightweight safety net to make sure the site still works after changes.
+* Page load validation across core routes
+* Visibility and presence of key UI elements
+* Basic navigation flow between sections
+* DOM-level checks to catch UI regressions early
 
-The goal is simple:
-pages should load, navigation shouldn’t break, and nothing obvious should be missing.
+These tests act as a **smoke/regression suite** to ensure the site doesn’t break after changes.
 
+---
 
-## stack
+## 🧱 How it’s built
 
-C# / .NET  
-NUnit  
-Selenium WebDriver  
-GitHub Actions  
+* **C# + NUnit** for test structure
+* **Selenium WebDriver 4** for browser automation
+* **Page Object Model (POM)** for maintainability
+* **Explicit waits** to handle async UI rendering
 
+---
 
-## running locally
+## ⚙️ CI/CD Integration
 
-```bash
-dotnet restore
-dotnet test
+Tests run automatically using GitHub Actions:
+
+* On push to `main`
+* When the portfolio site triggers a deployment event
+
+This helps catch UI issues immediately after changes.
+
+---
+
+## 🧪 Focus of this project
+
+This project focuses on:
+
+* Building a **clean, maintainable automation structure**
+* Creating **reliable UI checks (non-flaky tests)**
+* Simulating a **basic CI-driven regression suite**
+
+---
+
+## 🔧 Next steps
+
+* Add deeper user flow testing
+* Integrate API validation
+* Add test reporting (ExtentReports / Allure)
+* Expand coverage beyond UI presence checks
+
+---
