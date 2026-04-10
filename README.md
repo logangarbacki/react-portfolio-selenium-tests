@@ -1,58 +1,69 @@
 # Selenium UI Test Automation Framework (C# / NUnit)
 
-This is a UI automation framework I built to test my live portfolio site:
+A UI automation framework built to test my live portfolio site:
 👉 https://logangarbacki.dev
 
-The goal was to simulate a real-world QA setup by validating that core pages load correctly, key elements are present, and the UI remains stable across deployments.
+Built to simulate a real-world SDET/QA setup — validating that core pages load correctly, navigation works, content is accurate, and the UI stays stable across deployments.
+
+📊 **[View Live Allure Report](https://logangarbacki.github.io/react-portfolio-selenium-tests/)**
 
 ---
 
-## 🚀 What this tests
+## 🧪 Test Coverage
 
-* Page load validation across core routes
-* Visibility and presence of key UI elements
-* Basic navigation flow between sections
-* DOM-level checks to catch UI regressions early
+**46 tests** across 4 categories:
 
-These tests act as a **smoke/regression suite** to ensure the site doesn’t break after changes.
+| Category | Description |
+|----------|-------------|
+| Smoke | Element visibility, page load, critical path checks |
+| Regression | Content accuracy, navigation behavior, link validation |
+| Negative | Ensures bad states don't exist (broken links, placeholders, duplicate data) |
+| E2E | Full visitor flow from Hero → Projects → About → Contact |
 
----
-
-## 🧱 How it’s built
-
-* **C# + NUnit** for test structure
-* **Selenium WebDriver 4** for browser automation
-* **Page Object Model (POM)** for maintainability
-* **Explicit waits** to handle async UI rendering
+Tests cover 7 sections of the SPA: **Navbar, Hero, About, Projects, Skills, Resume, Contact**
 
 ---
 
-## ⚙️ CI/CD Integration
+## 🧱 How it's built
 
-Tests run automatically using GitHub Actions:
-
-* On push to `main`
-* When the portfolio site triggers a deployment event
-
-This helps catch UI issues immediately after changes.
-
----
-
-## 🧪 Focus of this project
-
-This project focuses on:
-
-* Building a **clean, maintainable automation structure**
-* Creating **reliable UI checks (non-flaky tests)**
-* Simulating a **basic CI-driven regression suite**
+- **C# + NUnit 3** — test structure and assertions
+- **Selenium WebDriver 4** — headless Chrome browser automation
+- **Page Object Model (POM)** — one class per page section, clean separation of selectors and logic
+- **DriverUtils** — custom scroll-in-view retry logic to handle IntersectionObserver scroll-reveal animations
+- **Allure.NUnit** — structured test reporting with suite/category breakdowns
+- **Screenshot on failure** — automatically captured and attached to the Allure report
 
 ---
 
-## 🔧 Next steps
+## ⚙️ CI/CD Pipeline
 
-* Add deeper user flow testing
-* Integrate API validation
-* Add test reporting (ExtentReports / Allure)
-* Expand coverage beyond UI presence checks
+Tests run automatically via **GitHub Actions** on:
+- Every push to `main`
+- Daily scheduled run (midnight UTC)
+- Portfolio site deployment trigger (`repository_dispatch`)
+
+After each run, an **Allure report is generated and deployed to GitHub Pages** automatically.
 
 ---
+
+## 📁 Project Structure
+
+```
+SeleniumTestFramework/
+├── Pages/          # Page Object classes (one per section)
+├── Tests/          # Test fixtures (Smoke, Regression, Negative, E2E)
+├── Utilities/      # DriverUtils, TestConfig
+├── Enums/          # NavSection enum
+└── .github/
+    └── workflows/  # GitHub Actions CI pipeline
+```
+
+---
+
+## 🔧 Key Engineering Decisions
+
+**Scroll-reveal handling** — The portfolio uses IntersectionObserver to animate elements into view. A naive `FindElement` would immediately timeout on below-the-fold elements. `DriverUtils.Find` scrolls the element into view inside the wait loop so the observer triggers before the visibility check.
+
+**JS `innerText` fallback** — The hero title uses a CSS `color: transparent` animation, causing Selenium's `.Text` to return empty. `DriverUtils.GetInnerText` uses JavaScript to bypass this.
+
+**Parallel execution** — Fixtures run in parallel (`ParallelScope.Fixtures`) with `LevelOfParallelism(2)` to balance speed and CI resource usage.
