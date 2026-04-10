@@ -19,7 +19,7 @@ namespace SeleniumTestFramework
             service.HideCommandPromptWindow = true;
             return new ChromeDriver(service, options);
         }
-        public static IWebElement Find(IWebDriver driver, By by, int timeoutSeconds = 10)
+        public static IWebElement Find(IWebDriver driver, By by, int timeoutSeconds = TestConfig.ElementTimeoutSeconds)
         {
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutSeconds));
             var js = (IJavaScriptExecutor)driver;
@@ -39,7 +39,7 @@ namespace SeleniumTestFramework
             });
         }
 
-        public static void WaitForUrlContains(IWebDriver driver, string fragment, int timeoutSeconds = 5)
+        public static void WaitForUrlContains(IWebDriver driver, string fragment, int timeoutSeconds = TestConfig.UrlTimeoutSeconds)
         {
             var wait = new WebDriverWait(driver, TimeSpan.FromSeconds(timeoutSeconds));
             wait.Until(d => d.Url.Contains(fragment, StringComparison.OrdinalIgnoreCase));
