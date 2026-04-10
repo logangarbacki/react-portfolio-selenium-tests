@@ -46,6 +46,7 @@ jobs:
 
       - name: List allure-results
         run: dir allure-results || echo "allure-results not found"
+        continue-on-error: true
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline
