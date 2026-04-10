@@ -9,6 +9,9 @@ on:
   schedule:
     - cron: '0 0 * * *'  # Daily at midnight UTC
 
+permissions:
+  contents: write
+
 jobs:
   run-selenium-tests:
     runs-on: windows-latest
@@ -38,6 +41,11 @@ jobs:
       - name: Run Selenium Tests
         run: dotnet test ./SeleniumTestFramework.csproj --logger "console;verbosity=normal"
         continue-on-error: true
+        env:
+          ALLURE_RESULTS_DIRECTORY: allure-results
+
+      - name: List allure-results
+        run: dir allure-results || echo "allure-results not found"
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline
