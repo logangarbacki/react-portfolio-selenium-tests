@@ -11,7 +11,9 @@ namespace SeleniumTestFramework.Pages
 
         public NavbarPage(IWebDriver driver) => _driver = driver;
 
-        public IWebElement NavMenu => DriverUtils.Find(_driver, By.CssSelector("nav.navbar"));
+        public IWebElement NavMenu      => DriverUtils.Find(_driver, By.CssSelector("nav.navbar"));
+        public IWebElement Logo         => DriverUtils.Find(_driver, By.CssSelector("a.nav-logo"));
+        public IWebElement StatusButton => DriverUtils.Find(_driver, By.CssSelector("button.nav-status"));
 
         public void ClickNavLink(NavSection section)
         {

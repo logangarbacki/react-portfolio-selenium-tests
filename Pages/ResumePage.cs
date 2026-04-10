@@ -1,22 +1,28 @@
-using System;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using SeleniumTestFramework;
 
-public class ResumePage
+namespace SeleniumTestFramework.Pages
 {
-    private IWebDriver _driver;
-    private WebDriverWait _wait;
-
-    public ResumePage(IWebDriver driver)
+    public class ResumePage
     {
-        _driver = driver;
-        _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(SeleniumTestFramework.TestConfig.DefaultTimeoutSeconds));
+        private readonly IWebDriver _driver;
+
+        public ResumePage(IWebDriver driver) => _driver = driver;
+
+        public IWebElement Heading        => DriverUtils.Find(_driver, By.CssSelector(".resume-heading"));
+        public IWebElement Blurb          => DriverUtils.Find(_driver, By.CssSelector(".resume-blurb"));
+        public IWebElement DownloadButton => DriverUtils.Find(_driver, By.CssSelector(".btn-download"));
+
+        public IWebElement EducationName   => DriverUtils.Find(_driver, By.CssSelector(".edu-name"));
+        public IWebElement EducationDegree => DriverUtils.Find(_driver, By.CssSelector(".edu-deg"));
+
+        public IWebElement ExperienceRole(int index) =>
+            DriverUtils.Find(_driver, By.CssSelector($".exp-item:nth-of-type({index}) .exp-role"));
+
+        public IWebElement ExperienceCompany(int index) =>
+            DriverUtils.Find(_driver, By.CssSelector($".exp-item:nth-of-type({index}) .exp-company"));
+
+        public IWebElement ExperiencePeriod(int index) =>
+            DriverUtils.Find(_driver, By.CssSelector($".exp-item:nth-of-type({index}) .exp-period"));
     }
-
-    public IWebElement Heading => DriverUtils.Find(_driver, By.CssSelector(".resume-heading"));
-    public IWebElement Blurb => DriverUtils.Find(_driver, By.CssSelector(".resume-blurb"));
-    public IWebElement DownloadButton => DriverUtils.Find(_driver, By.CssSelector(".btn-download"));
-
-
 }

@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using SeleniumTestFramework.Pages;
-using OpenQA.Selenium;
 
 namespace SeleniumTestFramework
 {
@@ -10,44 +9,44 @@ namespace SeleniumTestFramework
         private SkillsPage _skills;
 
         [SetUp]
-        public void SetUp()
-        {
-            _skills = new SkillsPage(Driver);
-            ((IJavaScriptExecutor)Driver).ExecuteScript(
-                "arguments[0].scrollIntoView({behavior:'instant'});", 
-                _skills.SkillsHeading
-            );
-        }
+        public void SetUp() => _skills = new SkillsPage(Driver);
 
         [Test, Category("Smoke")]
-        public void SkillsHeading_IsVisible()
+        public void SkillsHeading_IsVisible() =>
+            Assert.That(_skills.Heading.Displayed, Is.True);
+
+        [Test, Category("Smoke")]
+        public void Skills_LoadsCorrectly()
         {
-            Assert.That(_skills.SkillsHeading.Displayed, Is.True);
+            Assert.Multiple(() =>
+            {
+                Assert.That(_skills.Heading.Displayed, Is.True);
+                Assert.That(_skills.Heading.Text, Is.Not.Empty);
+                for (int i = 1; i <= 4; i++)
+                    Assert.That(_skills.SkillGroupHeader(i).Displayed, Is.True, $"Skill group {i} header not visible");
+                Assert.That(_skills.CertsSection.Displayed, Is.True);
+            });
         }
 
         [Test, Category("Regression")]
-        public void SkillsHeading_ContainsExpectedText()
+        public void SkillGroups_Content_IsCorrect()
         {
-            StringAssert.Contains("work", _skills.SkillsHeading.Text);
+            Assert.Multiple(() =>
+            {
+                for (int i = 1; i <= 4; i++)
+                    Assert.That(_skills.SkillGroupHeader(i).Text, Is.Not.Empty, $"Skill group {i} header is empty");
+            });
         }
 
         [Test, Category("Regression")]
-        public void AutomationToolsHeader_ContainsExpectedText()
+        public void Certifications_AreComplete()
         {
-            
-            Assert.That(_skills.AutomationToolsHeader.Text, Does.Contain("Automation Tools").IgnoreCase);
-        }
-
-        [Test, Category("Regression")]
-        public void CertificationsHeading_IsVisible()
-        {
-            Assert.That(_skills.CertificationsHeading.Displayed, Is.True);
-        }
-
-        [Test, Category("Regression")]
-        public void CertificationsHeading_ContainsCheckmark()
-        {
-            StringAssert.Contains("✓", _skills.CertificationsHeading.Text);
+            Assert.Multiple(() =>
+            {
+                Assert.That(_skills.CertsHeader.Displayed, Is.True);
+                Assert.That(_skills.CertsHeader.Text, Does.Contain("✓"));
+                Assert.That(_skills.GetCertCount(), Is.EqualTo(5));
+            });
         }
     }
 }

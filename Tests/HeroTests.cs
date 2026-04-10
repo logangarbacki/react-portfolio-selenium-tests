@@ -11,9 +11,18 @@ namespace SeleniumTestFramework
         [SetUp]
         public void SetUp() => _hero = new HeroPage(Driver);
 
+
         [Test, Category("Smoke")]
         public void HeroTitle_IsVisible() =>
             Assert.That(_hero.Title.Displayed, Is.True);
+
+        [Test, Category("Smoke")]
+        public void ViewWorkButton_IsVisible() =>
+            Assert.That(_hero.ViewWorkButton.Displayed, Is.True);
+
+        [Test, Category("Smoke")]
+        public void DownloadResumeButton_IsVisible() =>
+            Assert.That(_hero.DownloadResumeButton.Displayed, Is.True);
 
         [Test, Category("Regression")]
         public void HeroTitle_ContainsName() =>
@@ -39,20 +48,20 @@ namespace SeleniumTestFramework
             });
         }
 
-        [Test, Category("Smoke")]
-        public void ViewWorkButton_IsVisible() =>
-            Assert.That(_hero.ViewWorkButton.Displayed, Is.True);
-
-        [Test, Category("Smoke")]
-        public void DownloadResumeButton_IsVisible() =>
-            Assert.That(_hero.DownloadResumeButton.Displayed, Is.True);
-
         [Test, Category("Regression")]
         public void ClickingViewWork_NavigatesToProjectsSection()
         {
             _hero.ClickViewWork();
             DriverUtils.WaitForUrlContains(Driver, "#projects");
             Assert.That(Driver.Url, Does.Contain("#projects"));
+        }
+
+        [Test, Category("Regression")]
+        public void ClickingDownloadResume_NavigatesToResumeSection()
+        {
+            _hero.ClickDownloadResume();
+            DriverUtils.WaitForUrlContains(Driver, "#resume");
+            Assert.That(Driver.Url, Does.Contain("#resume"));
         }
     }
 }

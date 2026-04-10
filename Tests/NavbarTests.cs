@@ -13,6 +13,22 @@ namespace SeleniumTestFramework
         public void SetUp() => _navbar = new NavbarPage(Driver);
 
         [Test, Category("Smoke")]
+        public void NavLogo_IsVisible() =>
+            Assert.That(_navbar.Logo.Displayed, Is.True);
+
+        [Test, Category("Smoke")]
+        public void NavStatusButton_IsVisible() =>
+            Assert.That(_navbar.StatusButton.Displayed, Is.True);
+
+        [Test, Category("Regression")]
+        public void NavLogo_LinksToHome() =>
+            Assert.That(_navbar.Logo.GetAttribute("href"), Does.Contain("#home").IgnoreCase);
+
+        [Test, Category("Regression")]
+        public void NavStatusButton_ShowsAvailability() =>
+            Assert.That(_navbar.StatusButton.Text, Does.Contain("available").IgnoreCase);
+
+        [Test, Category("Smoke")]
         [TestCase(NavSection.About)]
         [TestCase(NavSection.Projects)]
         [TestCase(NavSection.Skills)]

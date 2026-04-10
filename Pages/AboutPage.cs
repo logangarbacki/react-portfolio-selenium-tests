@@ -9,10 +9,18 @@ namespace SeleniumTestFramework.Pages
 
         public AboutPage(IWebDriver driver) => _driver = driver;
 
-        public IWebElement Heading => DriverUtils.Find(_driver, By.CssSelector(".about-heading"));
-        public IWebElement LocationBadge => DriverUtils.Find(_driver, By.CssSelector(".about-badge"));
+        // ── Elements ─────────────────────────────────────────────────────────
+        public IWebElement Heading        => DriverUtils.Find(_driver, By.CssSelector(".about-heading"));
+        public IWebElement LocationBadge  => DriverUtils.Find(_driver, By.CssSelector(".about-badge"));
         public IWebElement IntroParagraph => DriverUtils.Find(_driver, By.CssSelector(".about-text"));
-        public IWebElement StatsGrid => DriverUtils.Find(_driver, By.CssSelector(".about-stats"));
-        public IWebElement CertificationsStat => DriverUtils.Find(_driver, By.CssSelector(".about-stats .stat-item:nth-child(2) .stat-value"));
+        public IWebElement StatsGrid      => DriverUtils.Find(_driver, By.CssSelector(".about-stats"));
+
+        public IWebElement StatValue(int index) =>
+            DriverUtils.Find(_driver, By.CssSelector($".about-stats .stat-item:nth-child({index}) .stat-value"));
+
+        public IWebElement StatLabel(int index) =>
+            DriverUtils.Find(_driver, By.CssSelector($".about-stats .stat-item:nth-child({index}) .stat-label"));
+
+        public IWebElement CertificationsStat => StatValue(2);
     }
 }
