@@ -15,10 +15,12 @@ namespace SeleniumTestFramework
         public void BaseSetUp()
         {
             Driver = DriverUtils.CreateChromeDriver();
-            // Append ?skip-boot=1 so the 3.5s terminal boot overlay
-            // doesn't block tests. Tests that exercise the boot itself
-            // should navigate without this query param.
-            var url = TestConfig.BaseUrl + (TestConfig.BaseUrl.Contains("?") ? "&" : "?") + "skip-boot=1";
+            // Append:
+            //  - skip-boot=1  → bypass the 3.5s terminal boot overlay
+            //  - test-form=1  → contact form short-circuits the real Formspree POST
+            //                   (so CI doesn't email on every run)
+            var sep = TestConfig.BaseUrl.Contains("?") ? "&" : "?";
+            var url = $"{TestConfig.BaseUrl}{sep}skip-boot=1&test-form=1";
             Driver.Navigate().GoToUrl(url);
 
             ((IJavaScriptExecutor)Driver).ExecuteScript(

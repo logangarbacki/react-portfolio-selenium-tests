@@ -61,14 +61,14 @@ namespace SeleniumTestFramework
         }
 
         [Test, Category("Regression")]
-        public void HeroSummary_ContainsKeyTechnologies()
+        public void HeroSummary_DescribesBreadthOfWork()
         {
             var text = _hero.Summary.Text;
             Assert.Multiple(() =>
             {
-                Assert.That(text, Does.Contain("Selenium"));
-                Assert.That(text, Does.Contain("React"));
-                Assert.That(text, Does.Contain("C#"));
+                Assert.That(text, Does.Contain("QA").IgnoreCase);
+                Assert.That(text, Does.Contain("full-stack").IgnoreCase);
+                Assert.That(text, Does.Contain("CI/CD").IgnoreCase);
             });
         }
 
