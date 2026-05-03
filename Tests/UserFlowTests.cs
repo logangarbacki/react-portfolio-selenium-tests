@@ -1,6 +1,8 @@
 using NUnit.Framework;
+using OpenQA.Selenium.Support.UI;
 using SeleniumTestFramework.Pages;
 using SeleniumTestFramework.Enums;
+using System;
 
 namespace SeleniumTestFramework
 {
@@ -28,39 +30,46 @@ namespace SeleniumTestFramework
         [Test, Category("E2E")]
         public void Visitor_Flows_From_Home_Through_Projects_About_To_Contact()
         {
-            // Home page assertions
-            Assert.That(_hero.Title.Displayed, Is.True, "Hero title should be visible on load");
-            Assert.That(_hero.Eyebrow.Text, Does.Contain("QA Engineer").IgnoreCase, "Eyebrow should show job title");
+            // Hero on load
+            Assert.That(_hero.Section.Displayed, Is.True, "Hero section should be visible on load");
+            var name = DriverUtils.GetInnerText(Driver, _hero.Name);
+            Assert.That(name, Does.Contain("Logan").And.Contain("Garbacki"),
+                "Hero name should be present");
 
-            // Clicks "View Work" goes to /#projects
-            _hero.ClickViewWork();
+            // Click "view projects" → URL anchors to #projects
+            _hero.ClickViewProjects();
             DriverUtils.WaitForUrlContains(Driver, "#projects");
             Assert.That(Driver.Url, Does.Contain("#projects"), "URL should update to #projects");
 
-            // Projects page assertions
-            Assert.That(_projects.Heading.Displayed, Is.True, "Projects heading should be visible");
+            // Projects section visible with all three cards
+            Assert.That(_projects.Section.Displayed, Is.True, "Projects section should be visible");
             for (int i = 1; i <= 3; i++)
-                Assert.That(_projects.ProjectTitle(i).Text, Is.Not.Empty, $"Project {i} title should not be empty");
+                Assert.That(_projects.ProjectTitle(i).Text, Is.Not.Empty,
+                    $"Project {i} title should not be empty");
 
-            // Navigate to About via navbar
+            // Navigate to About
             _navbar.ClickNavLink(NavSection.About);
             DriverUtils.WaitForUrlContains(Driver, "#about");
             Assert.That(Driver.Url, Does.Contain("#about"), "URL should update to #about");
+            Assert.That(_about.FirstParagraph.Displayed, Is.True, "About paragraph should be visible");
 
-            // About page assertions
-            Assert.That(_about.Heading.Displayed, Is.True, "About heading should be visible");
-            Assert.That(_about.LocationBadge.Displayed, Is.True, "Location badge should be visible");
-            Assert.That(_about.StatsGrid.Displayed, Is.True, "Stats grid should be visible");
-
-            // Navigate to Contact via navbar
+            // Navigate to Contact
             _navbar.ClickNavLink(NavSection.Contact);
             DriverUtils.WaitForUrlContains(Driver, "#contact");
             Assert.That(Driver.Url, Does.Contain("#contact"), "URL should update to #contact");
 
-            // Content page assertions
-            Assert.That(_contact.Heading.Displayed, Is.True, "Contact heading should be visible");
-            Assert.That(_contact.EmailLink.Displayed, Is.True, "Email link should be visible");
-            Assert.That(_contact.EmailLink.GetAttribute("href"), Does.Contain("mailto:"), "Email link should have mailto href");
+            // Contact form submission flow
+            Assert.That(_contact.Form.Displayed, Is.True, "Contact form should be visible");
+            _contact.Fill("E2E Visitor", "e2e@example.com", "End-to-end smoke message");
+            _contact.Submit();
+
+            var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
+            wait.Until(d => _contact.SuccessVisible);
+            // The success line types out "POST /contact → ok" — wait for it to land.
+            wait.Until(d => _contact.SuccessBlock.Text.IndexOf("ok", StringComparison.OrdinalIgnoreCase) >= 0);
+
+            Assert.That(_contact.SuccessBlock.Text, Does.Contain("ok").IgnoreCase,
+                "Contact form should show ok success state after submission");
         }
     }
 }

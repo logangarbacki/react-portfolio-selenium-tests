@@ -12,28 +12,34 @@ namespace SeleniumTestFramework
     {
         private NavbarPage _navbar;
         private ProjectsPage _projects;
-        private SkillsPage _skills;
         private ContactPage _contact;
-        private ResumePage _resume;
 
         [SetUp]
         public void SetUp()
         {
             _navbar   = new NavbarPage(Driver);
             _projects = new ProjectsPage(Driver);
-            _skills   = new SkillsPage(Driver);
             _contact  = new ContactPage(Driver);
-            _resume   = new ResumePage(Driver);
         }
 
         [Test, Category("Negative")]
-        public void Navbar_DoesNotHave_HeroLink()
+        public void Navbar_HasNo_HeroLink()
         {
-            // The hero section (id="home") intentionally has no navbar link.
-            var heroLink = Driver.FindElements(
-                OpenQA.Selenium.By.CssSelector("nav.navbar a[href='#hero']")
+            // Hero is the implicit landing — nav has no #hero or #home link.
+            var heroLinks = Driver.FindElements(
+                OpenQA.Selenium.By.CssSelector("[data-testid='nav'] a[href='#hero'], [data-testid='nav'] a[href='#home']")
             );
-            Assert.That(heroLink, Is.Empty, "Navbar should not contain a #hero link");
+            Assert.That(heroLinks, Is.Empty, "Navbar should not contain a hero/home anchor link");
+        }
+
+        [Test, Category("Negative")]
+        public void Navbar_HasNo_SkillsOrResumeAnchor()
+        {
+            // Skills and Resume sections were removed; only the resume PDF link remains.
+            var orphanAnchors = Driver.FindElements(
+                OpenQA.Selenium.By.CssSelector("[data-testid='nav'] a[href='#skills'], [data-testid='nav'] a[href='#resume']")
+            );
+            Assert.That(orphanAnchors, Is.Empty, "Navbar should not contain anchor links to removed sections");
         }
 
         [Test, Category("Negative")]
@@ -44,27 +50,6 @@ namespace SeleniumTestFramework
                 .ToList();
 
             Assert.That(titles, Is.Unique, "Each project title should be distinct");
-        }
-
-        [Test, Category("Negative")]
-        public void ProjectYears_AreNotPlaceholders()
-        {
-            Assert.Multiple(() =>
-            {
-                for (int i = 1; i <= 3; i++)
-                    Assert.That(_projects.ProjectYear(i).Text, Does.Not.Contain("0000"),
-                        $"Project {i} year should not be a placeholder");
-            });
-        }
-
-        [Test, Category("Negative")]
-        public void SkillGroupHeaders_AreUnique()
-        {
-            var headers = Enumerable.Range(1, 4)
-                .Select(i => _skills.SkillGroupHeader(i).Text)
-                .ToList();
-
-            Assert.That(headers, Is.Unique, "Each skill group header should be distinct");
         }
 
         [Test, Category("Negative")]
@@ -79,22 +64,24 @@ namespace SeleniumTestFramework
         }
 
         [Test, Category("Negative")]
-        public void DownloadButton_HrefIsNotBroken()
+        public void ContactForm_RequiredFields_AreEnforcedByMarkup()
         {
-            var href = _resume.DownloadButton.GetAttribute("href");
+            // Inputs use the `required` attribute — sanity check that none is missing.
             Assert.Multiple(() =>
             {
-                Assert.That(href, Is.Not.Null.And.Not.Empty, "Download button href should not be null or empty");
-                Assert.That(href, Does.Not.EqualTo("#"), "Download button href should not be a dead link");
+                Assert.That(_contact.NameInput.GetAttribute("required"), Is.Not.Null.And.Not.Empty);
+                Assert.That(_contact.EmailInput.GetAttribute("required"), Is.Not.Null.And.Not.Empty);
+                Assert.That(_contact.MessageInput.GetAttribute("required"), Is.Not.Null.And.Not.Empty);
             });
         }
 
         [Test, Category("Negative")]
-        public void AfterNavigatingToContact_UrlDoesNotContain_Hero()
+        public void AfterNavigatingToContact_UrlDoesNotContain_Projects()
         {
             _navbar.ClickNavLink(NavSection.Contact);
             DriverUtils.WaitForUrlContains(Driver, "#contact");
-            Assert.That(Driver.Url, Does.Not.Contain("#hero"), "URL should not reference #hero after navigating to contact");
+            Assert.That(Driver.Url, Does.Not.Contain("#projects"),
+                "URL should not reference #projects after navigating to contact");
         }
     }
 }

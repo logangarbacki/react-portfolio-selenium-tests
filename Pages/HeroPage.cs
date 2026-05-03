@@ -9,14 +9,14 @@ namespace SeleniumTestFramework.Pages
 
         public HeroPage(IWebDriver driver) => _driver = driver;
 
-        public IWebElement Title => DriverUtils.Find(_driver, By.CssSelector(".hero-title"));
-        public IWebElement Eyebrow => DriverUtils.Find(_driver, By.CssSelector(".hero-eyebrow span:not(.eyebrow-line)"));
-        public IWebElement Tagline => DriverUtils.Find(_driver, By.CssSelector(".hero-tagline"));
-        public IWebElement TechStack => DriverUtils.Find(_driver, By.CssSelector(".hero-sub"));
-        public IWebElement ViewWorkButton => DriverUtils.Find(_driver, By.CssSelector(".btn-primary"));
-        public IWebElement DownloadResumeButton => DriverUtils.Find(_driver, By.CssSelector(".btn-ghost"));
+        public IWebElement Section => DriverUtils.Find(_driver, By.CssSelector("[data-testid='hero']"));
+        public IWebElement Name => DriverUtils.Find(_driver, By.CssSelector("[data-testid='hero-name']"));
+        public IWebElement Label => DriverUtils.Find(_driver, By.CssSelector("[data-testid='hero-label']"));
+        public IWebElement Summary => DriverUtils.Find(_driver, By.CssSelector("[data-testid='hero-summary']"));
+        public IWebElement ViewProjectsButton => DriverUtils.Find(_driver, By.CssSelector("[data-testid='hero-cta-projects']"));
+        public IWebElement ResumeButton => DriverUtils.Find(_driver, By.CssSelector("[data-testid='hero-cta-resume']"));
 
-        public void ClickViewWork() => ViewWorkButton.Click();
-        public void ClickDownloadResume() => DownloadResumeButton.Click();
+        public void ClickViewProjects() => ViewProjectsButton.Click();
+        public void ClickResume() => ResumeButton.Click();
     }
 }

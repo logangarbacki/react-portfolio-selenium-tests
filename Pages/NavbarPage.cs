@@ -1,5 +1,4 @@
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using SeleniumTestFramework;
 using SeleniumTestFramework.Enums;
 
@@ -11,21 +10,31 @@ namespace SeleniumTestFramework.Pages
 
         public NavbarPage(IWebDriver driver) => _driver = driver;
 
-        public IWebElement NavMenu => DriverUtils.Find(_driver, By.CssSelector("nav.navbar"));
-        public IWebElement Logo => DriverUtils.Find(_driver, By.CssSelector("a.nav-logo"));
-        public IWebElement StatusButton => DriverUtils.Find(_driver, By.CssSelector("button.nav-status"));
+        public IWebElement Nav => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav']"));
+        public IWebElement NavName => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav-name']"));
+        public IWebElement Links => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav-links']"));
+
+        public IWebElement AboutLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav-link-about']"));
+        public IWebElement ProjectsLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav-link-projects']"));
+        public IWebElement ContactLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav-link-contact']"));
+        public IWebElement ResumeLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav-link-resume']"));
 
         public void ClickNavLink(NavSection section)
         {
-            var link = NavMenu.FindElement(By.CssSelector($"a[href='#{section.ToString().ToLower()}']"));
-            link.Click();
+            switch (section)
+            {
+                case NavSection.About:    AboutLink.Click(); break;
+                case NavSection.Projects: ProjectsLink.Click(); break;
+                case NavSection.Contact:  ContactLink.Click(); break;
+            }
         }
 
         public bool IsSectionVisible(NavSection section)
         {
             try
             {
-                var element = DriverUtils.Find(_driver, By.CssSelector($"section#{section.ToString().ToLower()}"));
+                var sectionTestId = section.ToString().ToLower();
+                var element = DriverUtils.Find(_driver, By.CssSelector($"[data-testid='{sectionTestId}']"));
                 return element.Displayed;
             }
             catch (WebDriverTimeoutException)

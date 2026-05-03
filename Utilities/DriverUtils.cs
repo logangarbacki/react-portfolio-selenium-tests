@@ -10,7 +10,7 @@ namespace SeleniumTestFramework
         public static IWebDriver CreateChromeDriver()
         {
             var options = new ChromeOptions();
-            options.AddArgument("--headless=new");
+            options.AddArgument("--headless");
             options.AddArgument("--disable-gpu");
             options.AddArgument("--window-size=1920,1080");
             options.AddArgument("--no-sandbox");
@@ -29,7 +29,9 @@ namespace SeleniumTestFramework
                 try
                 {
                     var el = d.FindElement(by);
-                    js.ExecuteScript("arguments[0].scrollIntoView({block:'center'});", el);
+                    // behavior:'instant' overrides the site's `scroll-behavior: smooth`
+                    // so Selenium doesn't try to click an element mid-scroll.
+                    js.ExecuteScript("arguments[0].scrollIntoView({block:'center', behavior:'instant'});", el);
                     return el.Displayed ? el : null;
                 }
                 catch (NoSuchElementException)

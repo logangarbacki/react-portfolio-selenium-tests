@@ -15,18 +15,28 @@ namespace SeleniumTestFramework
         public void SetUp() => _navbar = new NavbarPage(Driver);
 
         [Test, Category("Smoke")]
-        public void NavLogo_IsVisible() =>
-            Assert.That(_navbar.Logo.Displayed, Is.True);
+        public void Nav_IsVisible() =>
+            Assert.That(_navbar.Nav.Displayed, Is.True);
 
         [Test, Category("Smoke")]
-        public void NavStatusButton_IsVisible() =>
-            Assert.That(_navbar.StatusButton.Displayed, Is.True);
+        public void NavName_IsVisible() =>
+            Assert.That(_navbar.NavName.Displayed, Is.True);
+
+        [Test, Category("Smoke")]
+        public void NavLinks_AreAllVisible()
+        {
+            Assert.Multiple(() =>
+            {
+                Assert.That(_navbar.AboutLink.Displayed, Is.True);
+                Assert.That(_navbar.ProjectsLink.Displayed, Is.True);
+                Assert.That(_navbar.ContactLink.Displayed, Is.True);
+                Assert.That(_navbar.ResumeLink.Displayed, Is.True);
+            });
+        }
 
         [Test, Category("Smoke"), Retry(2)]
         [TestCase(NavSection.About)]
         [TestCase(NavSection.Projects)]
-        [TestCase(NavSection.Skills)]
-        [TestCase(NavSection.Resume)]
         [TestCase(NavSection.Contact)]
         public void Navigation_Works_For_All_Sections(NavSection section)
         {
@@ -38,11 +48,12 @@ namespace SeleniumTestFramework
         }
 
         [Test, Category("Regression")]
-        public void NavLogo_LinksToHome() =>
-            Assert.That(_navbar.Logo.GetAttribute("href"), Does.Contain("#home").IgnoreCase);
+        public void ResumeLink_PointsToPdf() =>
+            Assert.That(_navbar.ResumeLink.GetAttribute("href"),
+                Does.Contain("Logan_Garbacki_Resume.pdf").IgnoreCase);
 
         [Test, Category("Regression")]
-        public void NavStatusButton_ShowsAvailability() =>
-            Assert.That(_navbar.StatusButton.Text, Does.Contain("available").IgnoreCase);
+        public void NavName_ShowsLogan() =>
+            Assert.That(_navbar.NavName.Text, Does.Contain("logan").IgnoreCase);
     }
 }

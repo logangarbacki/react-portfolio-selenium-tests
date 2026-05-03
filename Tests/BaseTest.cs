@@ -15,7 +15,11 @@ namespace SeleniumTestFramework
         public void BaseSetUp()
         {
             Driver = DriverUtils.CreateChromeDriver();
-            Driver.Navigate().GoToUrl(TestConfig.BaseUrl);
+            // Append ?skip-boot=1 so the 3.5s terminal boot overlay
+            // doesn't block tests. Tests that exercise the boot itself
+            // should navigate without this query param.
+            var url = TestConfig.BaseUrl + (TestConfig.BaseUrl.Contains("?") ? "&" : "?") + "skip-boot=1";
+            Driver.Navigate().GoToUrl(url);
 
             ((IJavaScriptExecutor)Driver).ExecuteScript(
                 "document.getAnimations().forEach(a => { try { a.finish(); } catch(e) {} });"
