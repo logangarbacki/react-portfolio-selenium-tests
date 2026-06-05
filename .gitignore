@@ -3,3 +3,5 @@ obj/
 Screenshots/
 *.user
 .vs/
+# local test-run artifacts
+TestResults/
