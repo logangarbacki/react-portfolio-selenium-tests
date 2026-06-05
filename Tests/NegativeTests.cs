@@ -33,19 +33,25 @@ namespace SeleniumTestFramework
         }
 
         [Test, Category("Negative")]
-        public void Navbar_HasNo_SkillsOrResumeAnchor()
+        public void Page_HasNo_SkillsOrResumeLinks()
         {
-            // Skills and Resume sections were removed; only the resume PDF link remains.
+            // Skills/Resume anchors were removed, and the resume PDF download was taken down.
             var orphanAnchors = Driver.FindElements(
                 OpenQA.Selenium.By.CssSelector("[data-testid='nav'] a[href='#skills'], [data-testid='nav'] a[href='#resume']")
             );
             Assert.That(orphanAnchors, Is.Empty, "Navbar should not contain anchor links to removed sections");
+
+            // No resume download anywhere on the page.
+            var resumeLinks = Driver.FindElements(
+                OpenQA.Selenium.By.CssSelector("a[href*='Resume'], a[href*='resume.pdf']")
+            );
+            Assert.That(resumeLinks, Is.Empty, "Resume download links should be removed entirely");
         }
 
         [Test, Category("Negative")]
         public void ProjectTitles_AreUnique()
         {
-            var titles = Enumerable.Range(1, 3)
+            var titles = Enumerable.Range(1, 4)
                 .Select(i => _projects.ProjectTitle(i).Text)
                 .ToList();
 

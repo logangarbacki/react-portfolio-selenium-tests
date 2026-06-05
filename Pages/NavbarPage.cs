@@ -17,7 +17,6 @@ namespace SeleniumTestFramework.Pages
         public IWebElement AboutLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav-link-about']"));
         public IWebElement ProjectsLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav-link-projects']"));
         public IWebElement ContactLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav-link-contact']"));
-        public IWebElement ResumeLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='nav-link-resume']"));
 
         public void ClickNavLink(NavSection section)
         {

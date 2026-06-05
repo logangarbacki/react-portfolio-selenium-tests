@@ -18,11 +18,11 @@ namespace SeleniumTestFramework
             Assert.That(_projects.Section.Displayed, Is.True);
 
         [Test, Category("Smoke")]
-        public void AllThreeProjectCards_AreVisible()
+        public void AllProjectCards_AreVisible()
         {
             Assert.Multiple(() =>
             {
-                for (int i = 1; i <= 3; i++)
+                for (int i = 1; i <= 4; i++)
                     Assert.That(_projects.ProjectCard(i).Displayed, Is.True, $"Project card {i} not visible");
             });
         }
@@ -32,7 +32,7 @@ namespace SeleniumTestFramework
         {
             Assert.Multiple(() =>
             {
-                for (int i = 1; i <= 3; i++)
+                for (int i = 1; i <= 4; i++)
                 {
                     Assert.That(_projects.ProjectTitle(i).Text, Is.Not.Empty,        $"Project {i} title is empty");
                     Assert.That(_projects.ProjectStatus(i).Text, Is.Not.Empty,       $"Project {i} status is empty");
@@ -43,27 +43,39 @@ namespace SeleniumTestFramework
         }
 
         [Test, Category("Regression")]
-        public void Project1_IsSeleniumFramework()
+        public void Project1_IsPrintScanRegressionFramework()
         {
-            Assert.That(_projects.ProjectTitle(1).Text, Does.Contain("Selenium").IgnoreCase);
-            Assert.That(_projects.ProjectStatus(1).Text, Does.Contain("passing").IgnoreCase);
-            Assert.That(_projects.Project1GithubLink.GetAttribute("href"),
+            Assert.That(_projects.ProjectTitle(1).Text,
+                Does.Contain("PrintScan").IgnoreCase.And.Contain("Regression").IgnoreCase);
+            // Role/date label, not a pass/fail state
+            Assert.That(_projects.ProjectStatus(1).Text, Does.Contain("QA Specialist").IgnoreCase);
+        }
+
+        [Test, Category("Regression")]
+        public void Project2_IsPrintScanLocationSearchAndLive()
+        {
+            Assert.That(_projects.ProjectTitle(2).Text, Does.Contain("Location Search").IgnoreCase);
+            Assert.That(_projects.ProjectStatus(2).Text, Does.Contain("production").IgnoreCase);
+            Assert.That(_projects.LocationSearchLiveLink.GetAttribute("href"),
+                Does.Contain("printscan.com/Locations").IgnoreCase);
+        }
+
+        [Test, Category("Regression")]
+        public void Project3_IsSeleniumFrameworkAndPassing()
+        {
+            Assert.That(_projects.ProjectTitle(3).Text, Does.Contain("Selenium").IgnoreCase);
+            Assert.That(_projects.ProjectStatus(3).Text, Does.Contain("passing").IgnoreCase);
+            Assert.That(_projects.SeleniumGithubLink.GetAttribute("href"),
                 Does.Contain("logangarbacki/react-portfolio-selenium-tests"));
         }
 
         [Test, Category("Regression")]
-        public void Project2_IsLeadGenInDevelopment()
+        public void Project4_IsLeadGenAndLive()
         {
-            Assert.That(_projects.ProjectTitle(2).Text, Does.Contain("Lead Generation").IgnoreCase);
-            Assert.That(_projects.ProjectStatus(2).Text, Does.Contain("development").IgnoreCase);
-        }
-
-        [Test, Category("Regression")]
-        public void Project3_IsLittleLemonAndLive()
-        {
-            Assert.That(_projects.ProjectTitle(3).Text, Does.Contain("Little Lemon").IgnoreCase);
-            Assert.That(_projects.Project3LiveLink.GetAttribute("href"),
-                Does.Contain("vercel.app").IgnoreCase);
+            Assert.That(_projects.ProjectTitle(4).Text, Does.Contain("Lead Generation").IgnoreCase);
+            Assert.That(_projects.ProjectStatus(4).Text, Does.Contain("live").IgnoreCase);
+            Assert.That(_projects.LeadGenLiveLink.GetAttribute("href"),
+                Does.Contain("garbackidigital.com/platform").IgnoreCase);
         }
     }
 }

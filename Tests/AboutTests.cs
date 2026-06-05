@@ -25,7 +25,8 @@ namespace SeleniumTestFramework
                 Assert.That(_about.Section.Displayed, Is.True);
                 Assert.That(_about.FirstParagraph.Displayed, Is.True);
                 Assert.That(_about.SecondParagraph.Displayed, Is.True);
-                Assert.That(_about.SectionLog.Displayed, Is.True);
+                Assert.That(_about.AgencyLink.GetAttribute("href"),
+                    Does.Contain("garbackidigital.com/work").IgnoreCase);
             });
         }
 
@@ -36,8 +37,8 @@ namespace SeleniumTestFramework
             Assert.Multiple(() =>
             {
                 Assert.That(text, Does.Contain("Long Island").IgnoreCase);
-                Assert.That(text, Does.Contain("QA").IgnoreCase);
-                Assert.That(text, Does.Contain("development").IgnoreCase);
+                Assert.That(text, Does.Contain("engineer").IgnoreCase);
+                Assert.That(text, Does.Contain("C#").IgnoreCase);
             });
         }
 
@@ -47,7 +48,7 @@ namespace SeleniumTestFramework
             var text = _about.SecondParagraph.Text;
             Assert.Multiple(() =>
             {
-                Assert.That(text, Does.Contain("CI/CD").IgnoreCase);
+                Assert.That(text, Does.Contain("production").IgnoreCase);
                 Assert.That(text, Does.Contain("Selenium").IgnoreCase);
                 Assert.That(text, Does.Contain("Allure").IgnoreCase);
             });

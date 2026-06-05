@@ -30,7 +30,6 @@ namespace SeleniumTestFramework
                 Assert.That(_navbar.AboutLink.Displayed, Is.True);
                 Assert.That(_navbar.ProjectsLink.Displayed, Is.True);
                 Assert.That(_navbar.ContactLink.Displayed, Is.True);
-                Assert.That(_navbar.ResumeLink.Displayed, Is.True);
             });
         }
 
@@ -46,11 +45,6 @@ namespace SeleniumTestFramework
             Assert.That(_navbar.IsSectionVisible(section), Is.True);
             Assert.That(Driver.Url, Does.Contain(section.ToString()).IgnoreCase);
         }
-
-        [Test, Category("Regression")]
-        public void ResumeLink_PointsToPdf() =>
-            Assert.That(_navbar.ResumeLink.GetAttribute("href"),
-                Does.Contain("Logan_Garbacki_Resume.pdf").IgnoreCase);
 
         [Test, Category("Regression")]
         public void NavName_ShowsLogan() =>

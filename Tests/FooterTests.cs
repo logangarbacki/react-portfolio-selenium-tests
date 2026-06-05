@@ -19,6 +19,6 @@ namespace SeleniumTestFramework
 
         [Test, Category("Regression")]
         public void Footer_ShowsBrandLine() =>
-            Assert.That(_footer.Container.Text, Does.Contain("logangarbacki.dev").IgnoreCase);
+            Assert.That(_footer.Container.Text, Does.Contain("Garbacki").IgnoreCase);
     }
 }

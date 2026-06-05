@@ -43,7 +43,7 @@ namespace SeleniumTestFramework
 
             // Projects section visible with all three cards
             Assert.That(_projects.Section.Displayed, Is.True, "Projects section should be visible");
-            for (int i = 1; i <= 3; i++)
+            for (int i = 1; i <= 4; i++)
                 Assert.That(_projects.ProjectTitle(i).Text, Is.Not.Empty,
                     $"Project {i} title should not be empty");
 

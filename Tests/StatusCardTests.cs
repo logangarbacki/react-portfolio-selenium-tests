@@ -47,7 +47,9 @@ namespace SeleniumTestFramework
             });
 
             var badge = _card.Badge.Text;
-            Assert.That(badge, Is.AnyOf("PASSING", "FAILURE", "OFFLINE", "PENDING"),
+            // Badge vocabulary: PASSING (green), FAILING, OFFLINE, or "N KNOWN-FAIL"
+            // (shown when GitHub concluded success but Allure has non-blocking failures).
+            Assert.That(badge, Does.Match("PASSING|FAILING|OFFLINE|KNOWN-FAIL"),
                 $"Status badge resolved to unexpected value: {badge}");
         }
 

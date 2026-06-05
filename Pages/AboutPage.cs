@@ -12,6 +12,7 @@ namespace SeleniumTestFramework.Pages
         public IWebElement Section => DriverUtils.Find(_driver, By.CssSelector("[data-testid='about']"));
         public IWebElement FirstParagraph => DriverUtils.Find(_driver, By.CssSelector("[data-testid='about-paragraph-1']"));
         public IWebElement SecondParagraph => DriverUtils.Find(_driver, By.CssSelector("[data-testid='about-paragraph-2']"));
-        public IWebElement SectionLog => DriverUtils.Find(_driver, By.CssSelector("[data-testid='log-about']"));
+        // Single agency reference — points to garbackidigital.com/work
+        public IWebElement AgencyLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='about-agency-link']"));
     }
 }

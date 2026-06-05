@@ -28,8 +28,8 @@ namespace SeleniumTestFramework
             Assert.That(_hero.ViewProjectsButton.Displayed, Is.True);
 
         [Test, Category("Smoke")]
-        public void ResumeButton_IsVisible() =>
-            Assert.That(_hero.ResumeButton.Displayed, Is.True);
+        public void ContactButton_IsVisible() =>
+            Assert.That(_hero.ContactButton.Displayed, Is.True);
 
         [Test, Category("Regression")]
         public void HeroName_ContainsLoganGarbacki()
@@ -42,8 +42,8 @@ namespace SeleniumTestFramework
         [Test, Category("Regression")]
         public void HeroLabel_ContainsRoleAndLocation()
         {
-            // Label is typed in via JS one char at a time (~30ms/char).
-            // Full string is ~41 chars → ~1.3s total. Wait until it stops growing.
+            // Label now renders statically (the typed-in animation was removed);
+            // wait until it's present and contains the location.
             var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
             wait.Until(d =>
             {
@@ -67,8 +67,8 @@ namespace SeleniumTestFramework
             Assert.Multiple(() =>
             {
                 Assert.That(text, Does.Contain("QA").IgnoreCase);
-                Assert.That(text, Does.Contain("full-stack").IgnoreCase);
-                Assert.That(text, Does.Contain("CI/CD").IgnoreCase);
+                Assert.That(text, Does.Contain("Selenium").IgnoreCase);
+                Assert.That(text, Does.Contain("deploy").IgnoreCase);
             });
         }
 
@@ -81,10 +81,9 @@ namespace SeleniumTestFramework
         }
 
         [Test, Category("Regression")]
-        public void ResumeButton_LinksToResumePdf()
+        public void GetInTouchButton_LinksToContact()
         {
-            var href = _hero.ResumeButton.GetAttribute("href");
-            Assert.That(href, Does.Contain("Logan_Garbacki_Resume.pdf").IgnoreCase);
+            Assert.That(_hero.ContactButton.GetAttribute("href"), Does.Contain("#contact"));
         }
     }
 }
