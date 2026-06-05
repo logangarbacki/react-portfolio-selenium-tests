@@ -54,8 +54,8 @@ namespace SeleniumTestFramework
             var text = DriverUtils.GetInnerText(Driver, _hero.Label);
             Assert.Multiple(() =>
             {
-                Assert.That(text, Does.Contain("qa").IgnoreCase);
-                Assert.That(text, Does.Contain("developer").IgnoreCase);
+                Assert.That(text, Does.Contain("sdet").IgnoreCase);
+                Assert.That(text, Does.Contain("full-stack").IgnoreCase);
                 Assert.That(text, Does.Contain("long island").IgnoreCase);
             });
         }

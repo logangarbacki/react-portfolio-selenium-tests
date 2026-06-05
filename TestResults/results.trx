@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="52b1ab32-fb15-427b-9b73-8ba306fa5cc8" name="agarl@LAPTOP-38DH13 2026-06-05 12:59:15" runUser="LAPTOP-38DH13\agarl" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-06-05T12:59:15.8594189-04:00" queuing="2026-06-05T12:59:15.8594190-04:00" start="2026-06-05T12:59:09.3349126-04:00" finish="2026-06-05T13:00:03.6243887-04:00" />
+  <TestSettings name="default" id="676c2ece-8c36-4b04-901a-e512f1c5c76b">
+    <Deployment runDeploymentRoot="agarl_LAPTOP-38DH13_2026-06-05_12_59_15" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="2fb097ca-2dff-417c-b684-ef53b1900d9e" testId="6de6b794-9a4d-f4db-e632-d46dc6da2de6" testName="Project3_IsSeleniumFrameworkAndPassing" computerName="LAPTOP-38DH13" duration="00:00:02.3159350" startTime="2026-06-05T12:59:50.5021422-04:00" endTime="2026-06-05T12:59:52.8180765-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2fb097ca-2dff-417c-b684-ef53b1900d9e" />
+    <UnitTestResult executionId="46e2a6be-7288-4d51-8df6-6653211d1e89" testId="9cd8717c-e297-6751-a2d7-35425e9bbeae" testName="ContactSection_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.5425670" startTime="2026-06-05T12:59:17.4501230-04:00" endTime="2026-06-05T12:59:18.9926892-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="46e2a6be-7288-4d51-8df6-6653211d1e89" />
+    <UnitTestResult executionId="f4eeb2a3-d19b-4799-a708-a47291d2b416" testId="513a4e95-647d-f366-6434-df6d5c1c099a" testName="AboutSection_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.5595310" startTime="2026-06-05T12:59:18.9996370-04:00" endTime="2026-06-05T12:59:20.5591670-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f4eeb2a3-d19b-4799-a708-a47291d2b416" />
+    <UnitTestResult executionId="3a860ddf-d8e9-4490-93ab-e0badc4d8558" testId="e2cf2421-a076-ac0f-2550-86e88a9b0555" testName="StatusCard_CommitOrFallbackVisible" computerName="LAPTOP-38DH13" duration="00:00:01.7397430" startTime="2026-06-05T12:59:57.7728310-04:00" endTime="2026-06-05T12:59:59.5125731-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3a860ddf-d8e9-4490-93ab-e0badc4d8558" />
+    <UnitTestResult executionId="de48d02f-a72d-4f68-b7ab-f8fef5aed45f" testId="b8189719-2894-b418-cabe-f0669b07e6b3" testName="HeroName_ContainsLoganGarbacki" computerName="LAPTOP-38DH13" duration="00:00:02.4684630" startTime="2026-06-05T12:59:30.9145090-04:00" endTime="2026-06-05T12:59:33.3829713-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de48d02f-a72d-4f68-b7ab-f8fef5aed45f" />
+    <UnitTestResult executionId="3671ddb7-ca0e-4d04-9303-19f6a4c8eace" testId="6a4d3d50-21b6-438c-1967-52b8e36e8b9e" testName="Footer_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.6800520" startTime="2026-06-05T12:59:20.5614389-04:00" endTime="2026-06-05T12:59:22.2414899-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3671ddb7-ca0e-4d04-9303-19f6a4c8eace" />
+    <UnitTestResult executionId="19975b7c-a12a-4f01-b400-c40dfaabf0f6" testId="d6fbc674-0d13-c605-46fc-8b31d7e98c69" testName="ViewProjectsButton_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.7893920" startTime="2026-06-05T12:59:38.5184247-04:00" endTime="2026-06-05T12:59:40.3078160-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19975b7c-a12a-4f01-b400-c40dfaabf0f6" />
+    <UnitTestResult executionId="d2202c8b-8fdc-48cf-9d78-8e2e17b03c18" testId="d6b5d824-faac-9042-d7f6-5cfddc411b7b" testName="Nav_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.4851180" startTime="2026-06-05T12:59:24.2183878-04:00" endTime="2026-06-05T12:59:25.7035052-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2202c8b-8fdc-48cf-9d78-8e2e17b03c18" />
+    <UnitTestResult executionId="3ca5de1c-e9a7-46a8-b063-8b3bfe6fed60" testId="90bd079e-a469-2897-6917-c5c0e5a83c62" testName="StatusBar_ShowsBranchName" computerName="LAPTOP-38DH13" duration="00:00:01.7228030" startTime="2026-06-05T12:59:52.2950379-04:00" endTime="2026-06-05T12:59:54.0178407-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ca5de1c-e9a7-46a8-b063-8b3bfe6fed60" />
+    <UnitTestResult executionId="126e3681-0c20-4259-a321-09aad7a617c4" testId="69ed24aa-f842-a861-597d-f12e698facf0" testName="StatusCard_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.6786870" startTime="2026-06-05T12:59:59.5126015-04:00" endTime="2026-06-05T13:00:01.1912881-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="126e3681-0c20-4259-a321-09aad7a617c4" />
+    <UnitTestResult executionId="5d9a0b09-2a92-4a0f-b504-c013a87c4917" testId="6ca090aa-d57d-f805-5a9e-a8d1c541094d" testName="ContactEmail_IsNotPlaceholder" computerName="LAPTOP-38DH13" duration="00:00:01.8157200" startTime="2026-06-05T12:59:38.7005116-04:00" endTime="2026-06-05T12:59:40.5162314-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5d9a0b09-2a92-4a0f-b504-c013a87c4917" />
+    <UnitTestResult executionId="a6dd72e0-e85c-402a-942e-e52a9fa6f5c8" testId="6543acef-f115-f76f-0918-29ebbe2b0455" testName="Navigation_Works_For_All_Sections(About)" computerName="LAPTOP-38DH13" duration="00:00:01.5981660" startTime="2026-06-05T12:59:25.7036093-04:00" endTime="2026-06-05T12:59:27.3017751-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6dd72e0-e85c-402a-942e-e52a9fa6f5c8" />
+    <UnitTestResult executionId="dfb2e9dd-b064-49ab-9068-2ca1da55fcd8" testId="e35c2672-fe40-3336-4219-2b9090efe574" testName="About_LoadsCorrectly" computerName="LAPTOP-38DH13" duration="00:00:01.6440700" startTime="2026-06-05T12:59:15.8284924-04:00" endTime="2026-06-05T12:59:17.4725619-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dfb2e9dd-b064-49ab-9068-2ca1da55fcd8" />
+    <UnitTestResult executionId="59474f60-5d40-49b0-99fb-3f23c48db863" testId="42ebe71d-928d-06df-d7fe-957b711b0d71" testName="Page_HasNo_SkillsOrResumeLinks" computerName="LAPTOP-38DH13" duration="00:00:01.8089820" startTime="2026-06-05T12:59:43.9783789-04:00" endTime="2026-06-05T12:59:45.7873610-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59474f60-5d40-49b0-99fb-3f23c48db863" />
+    <UnitTestResult executionId="42cf8115-69f7-40c2-ad10-46f8bef9b24e" testId="34f06627-6461-8978-bbcf-7c73f769fa18" testName="Project2_IsPrintScanLocationSearchAndLive" computerName="LAPTOP-38DH13" duration="00:00:02.2186110" startTime="2026-06-05T12:59:48.2835025-04:00" endTime="2026-06-05T12:59:50.5021128-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42cf8115-69f7-40c2-ad10-46f8bef9b24e" />
+    <UnitTestResult executionId="06ff60ec-c69f-4f5c-a116-9b5fc5341df7" testId="f196aad4-7f91-93e2-90f6-a9c9c8daff12" testName="StatusBar_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.7106310" startTime="2026-06-05T12:59:50.5843804-04:00" endTime="2026-06-05T12:59:52.2950110-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06ff60ec-c69f-4f5c-a116-9b5fc5341df7" />
+    <UnitTestResult executionId="b107fab2-81bc-4e3b-b319-5a2314eafd0e" testId="6e4c6548-77f2-b714-7f12-b45b5c8ebcd2" testName="StatusCard_AllMetricsRendered" computerName="LAPTOP-38DH13" duration="00:00:01.8925130" startTime="2026-06-05T12:59:55.8802913-04:00" endTime="2026-06-05T12:59:57.7728038-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b107fab2-81bc-4e3b-b319-5a2314eafd0e" />
+    <UnitTestResult executionId="06bf0a0e-f746-4f20-9b79-c151e3e5d0db" testId="cce5bebd-a088-c6c9-d14d-cd1df11006c9" testName="EachProject_HasCompleteContent" computerName="LAPTOP-38DH13" duration="00:00:02.7377320" startTime="2026-06-05T12:59:43.0743687-04:00" endTime="2026-06-05T12:59:45.8121004-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06bf0a0e-f746-4f20-9b79-c151e3e5d0db" />
+    <UnitTestResult executionId="1cd940ae-e441-49b4-9c8d-04dd1afc6cad" testId="2452b942-4c08-8af5-3c7c-d81d13b74745" testName="HeroName_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.7084420" startTime="2026-06-05T12:59:33.3830033-04:00" endTime="2026-06-05T12:59:35.0914445-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1cd940ae-e441-49b4-9c8d-04dd1afc6cad" />
+    <UnitTestResult executionId="028f3256-03cb-4310-968a-a59e29558173" testId="10ea20f5-32d7-1b9a-1433-97530790291a" testName="Navbar_HasNo_HeroLink" computerName="LAPTOP-38DH13" duration="00:00:01.6859060" startTime="2026-06-05T12:59:42.2924476-04:00" endTime="2026-06-05T12:59:43.9783527-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="028f3256-03cb-4310-968a-a59e29558173" />
+    <UnitTestResult executionId="3d74b4df-7665-4ddd-a5a5-ff04d4f22a0b" testId="d5bf33fa-0cfe-1dc2-6e8e-8b91d4643421" testName="Navigation_Works_For_All_Sections(Contact)" computerName="LAPTOP-38DH13" duration="00:00:01.9717740" startTime="2026-06-05T12:59:28.9937535-04:00" endTime="2026-06-05T12:59:30.9655273-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d74b4df-7665-4ddd-a5a5-ff04d4f22a0b" />
+    <UnitTestResult executionId="2a17d039-53b7-4f5d-936a-dbfd9faae43a" testId="6fcd36ea-27dc-7997-4048-19f07d22f086" testName="StatusBar_ShowsHostname" computerName="LAPTOP-38DH13" duration="00:00:01.8619460" startTime="2026-06-05T12:59:54.0178701-04:00" endTime="2026-06-05T12:59:55.8798152-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a17d039-53b7-4f5d-936a-dbfd9faae43a" />
+    <UnitTestResult executionId="f8932b6b-8a13-4f6b-99b3-6a783e67d077" testId="0b691209-18d5-c456-712e-3b999b33cdb3" testName="ContactButton_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.5478870" startTime="2026-06-05T12:59:25.4223983-04:00" endTime="2026-06-05T12:59:26.9702859-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f8932b6b-8a13-4f6b-99b3-6a783e67d077" />
+    <UnitTestResult executionId="c2a78ec8-b8a4-4b3a-b012-87aa4478b65b" testId="979ccbc7-dc8b-b6f5-dc64-3940a42c5bb5" testName="StatusBar_AllSegmentsDisplayed" computerName="LAPTOP-38DH13" duration="00:00:01.7452670" startTime="2026-06-05T12:59:48.8390866-04:00" endTime="2026-06-05T12:59:50.5843527-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2a78ec8-b8a4-4b3a-b012-87aa4478b65b" />
+    <UnitTestResult executionId="29465b3e-e5cc-44f4-82e3-9bbac2f37543" testId="bc4a7984-83ec-bc3f-4722-c87e1d8c8bf7" testName="ContactForm_LoadsAllInputs" computerName="LAPTOP-38DH13" duration="00:00:05.0358460" startTime="2026-06-05T12:59:10.7917675-04:00" endTime="2026-06-05T12:59:15.8275692-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="29465b3e-e5cc-44f4-82e3-9bbac2f37543" />
+    <UnitTestResult executionId="23e92a48-87d3-4746-8cab-95e778fa3203" testId="28c55bcf-2f17-d255-1a4d-ebaf37130aee" testName="Footer_ShowsBrandLine" computerName="LAPTOP-38DH13" duration="00:00:01.5544579" startTime="2026-06-05T12:59:22.2415238-04:00" endTime="2026-06-05T12:59:23.7959814-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="23e92a48-87d3-4746-8cab-95e778fa3203" />
+    <UnitTestResult executionId="ccfe1cbe-4e36-40d7-ba16-54b5b8bcd49d" testId="393cadf2-f9dc-c6bb-c350-98ee3d3099dd" testName="Form_Submission_ShowsSuccessState" computerName="LAPTOP-38DH13" duration="00:00:03.4218950" startTime="2026-06-05T12:59:20.7959921-04:00" endTime="2026-06-05T12:59:24.2178861-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ccfe1cbe-4e36-40d7-ba16-54b5b8bcd49d" />
+    <UnitTestResult executionId="01b80c6a-0f82-4a7f-8aa6-f77bdf2767e3" testId="983cdfa1-d6a6-f1f8-8476-625598e8278b" testName="NavName_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.7906990" startTime="2026-06-05T12:59:33.4767341-04:00" endTime="2026-06-05T12:59:35.2674328-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="01b80c6a-0f82-4a7f-8aa6-f77bdf2767e3" />
+    <UnitTestResult executionId="947a54b9-2d8c-42a6-8975-66b14347efc2" testId="408f64dd-d11f-133a-c04a-8dd3876c4ff3" testName="NavLinks_AreAllVisible" computerName="LAPTOP-38DH13" duration="00:00:02.5111270" startTime="2026-06-05T12:59:30.9655788-04:00" endTime="2026-06-05T12:59:33.4767048-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="947a54b9-2d8c-42a6-8975-66b14347efc2" />
+    <UnitTestResult executionId="1540c903-f656-4303-883e-80d840e3fdde" testId="a5dc8aff-491d-0db0-561b-086d919f4b89" testName="Visitor_Flows_From_Home_Through_Projects_About_To_Contact" computerName="LAPTOP-38DH13" duration="00:00:04.3832280" startTime="2026-06-05T12:59:56.9267306-04:00" endTime="2026-06-05T13:00:01.3099580-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1540c903-f656-4303-883e-80d840e3fdde" />
+    <UnitTestResult executionId="699c3dc8-56e3-479b-ac1d-6244fff3f0bb" testId="bc7e16f0-9a04-3729-0222-5bc7a9040623" testName="About_SecondParagraph_DescribesLiveCiCdLink" computerName="LAPTOP-38DH13" duration="00:00:01.5270240" startTime="2026-06-05T12:59:17.4725889-04:00" endTime="2026-06-05T12:59:18.9996124-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="699c3dc8-56e3-479b-ac1d-6244fff3f0bb" />
+    <UnitTestResult executionId="25026f9d-2136-4e0a-8154-ba3d0b0661c9" testId="0052f1c8-98e5-d2af-7f51-aee19f9008b3" testName="Navigation_Works_For_All_Sections(Projects)" computerName="LAPTOP-38DH13" duration="00:00:01.6919220" startTime="2026-06-05T12:59:27.3018028-04:00" endTime="2026-06-05T12:59:28.9937241-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="25026f9d-2136-4e0a-8154-ba3d0b0661c9" />
+    <UnitTestResult executionId="61be66e8-9d24-455c-804c-7267f9ccd2dc" testId="1b74d486-5b49-9219-a8c1-66c89e4d816a" testName="HeroLabel_ContainsRoleAndLocation" computerName="LAPTOP-38DH13" duration="00:00:02.0064530" startTime="2026-06-05T12:59:28.9080163-04:00" endTime="2026-06-05T12:59:30.9144687-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61be66e8-9d24-455c-804c-7267f9ccd2dc" />
+    <UnitTestResult executionId="64e9b3ca-7f28-492f-a6f2-b20da62d4e5a" testId="68346bfd-9d4d-8e7e-11f5-8576521329e0" testName="ContactLinks_HaveCorrectHrefs" computerName="LAPTOP-38DH13" duration="00:00:01.6215890" startTime="2026-06-05T12:59:15.8284941-04:00" endTime="2026-06-05T12:59:17.4500825-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="64e9b3ca-7f28-492f-a6f2-b20da62d4e5a" />
+    <UnitTestResult executionId="dbe18017-427b-4328-82ea-606aedad3094" testId="9b00cf02-0405-ef25-dd6b-74cfca961a9a" testName="ClickingViewProjects_NavigatesToProjectsAnchor" computerName="LAPTOP-38DH13" duration="00:00:01.6258420" startTime="2026-06-05T12:59:23.7965288-04:00" endTime="2026-06-05T12:59:25.4223704-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dbe18017-427b-4328-82ea-606aedad3094" />
+    <UnitTestResult executionId="b7166ff6-c5eb-45de-8400-e5d71043cf6c" testId="c58951b1-17b2-924e-2e17-0bc590c9cb57" testName="StatusCard_PopulatesWithLiveData" computerName="LAPTOP-38DH13" duration="00:00:02.3852550" startTime="2026-06-05T13:00:01.1913174-04:00" endTime="2026-06-05T13:00:03.5765715-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7166ff6-c5eb-45de-8400-e5d71043cf6c" />
+    <UnitTestResult executionId="41e517d2-b33a-421f-b885-0d4229750fe2" testId="5939e202-901b-6660-b2f7-4de65560a16b" testName="AfterNavigatingToContact_UrlDoesNotContain_Projects" computerName="LAPTOP-38DH13" duration="00:00:01.7215560" startTime="2026-06-05T12:59:36.9789264-04:00" endTime="2026-06-05T12:59:38.7004831-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="41e517d2-b33a-421f-b885-0d4229750fe2" />
+    <UnitTestResult executionId="5bf04735-7ee9-4a20-b710-55a786d3f22e" testId="37967c48-ebb0-8043-4b2c-99218da5b6fe" testName="AllProjectCards_AreVisible" computerName="LAPTOP-38DH13" duration="00:00:02.7655219" startTime="2026-06-05T12:59:40.3085853-04:00" endTime="2026-06-05T12:59:43.0741066-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5bf04735-7ee9-4a20-b710-55a786d3f22e" />
+    <UnitTestResult executionId="19e3fe8b-a9e5-4066-a65d-e4a61c736c4f" testId="423e3903-3d03-e108-4702-5a97cdbd3715" testName="ProjectTitles_AreUnique" computerName="LAPTOP-38DH13" duration="00:00:03.0511040" startTime="2026-06-05T12:59:45.7873900-04:00" endTime="2026-06-05T12:59:48.8384933-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="19e3fe8b-a9e5-4066-a65d-e4a61c736c4f" />
+    <UnitTestResult executionId="763b0adb-3b03-4ab7-b096-42bff649fb5f" testId="83a387b1-6e8f-ac28-6240-ade49a760bde" testName="Project4_IsLeadGenAndLive" computerName="LAPTOP-38DH13" duration="00:00:02.3485860" startTime="2026-06-05T12:59:52.8181057-04:00" endTime="2026-06-05T12:59:55.1666912-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="763b0adb-3b03-4ab7-b096-42bff649fb5f" />
+    <UnitTestResult executionId="66eaa0fb-0e91-41a2-8072-73a6308d315c" testId="70d05771-12d7-2d73-446b-5d30e9a284b6" testName="About_FirstParagraph_DescribesEngineerRole" computerName="LAPTOP-38DH13" duration="00:00:05.0358500" startTime="2026-06-05T12:59:10.7917675-04:00" endTime="2026-06-05T12:59:15.8275652-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="66eaa0fb-0e91-41a2-8072-73a6308d315c" />
+    <UnitTestResult executionId="0b46964b-1e5a-4494-b7b9-19f408be3f00" testId="e282fea2-7cf0-637d-0171-9ea3995667d4" testName="NavName_ShowsLogan" computerName="LAPTOP-38DH13" duration="00:00:01.7109320" startTime="2026-06-05T12:59:35.2674632-04:00" endTime="2026-06-05T12:59:36.9783945-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b46964b-1e5a-4494-b7b9-19f408be3f00" />
+    <UnitTestResult executionId="8c8a4096-e8b7-4da4-9401-ed633e117694" testId="1090ee04-dbc0-58c7-2ec5-6e7dd7f91dc8" testName="GetInTouchButton_LinksToContact" computerName="LAPTOP-38DH13" duration="00:00:01.9376670" startTime="2026-06-05T12:59:26.9703167-04:00" endTime="2026-06-05T12:59:28.9079833-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c8a4096-e8b7-4da4-9401-ed633e117694" />
+    <UnitTestResult executionId="4422e0f9-2fdd-49a7-9a21-2df5bd93a7b0" testId="21d512af-9f32-80fc-1fbb-e064d15d29f2" testName="HeroSummary_DescribesBreadthOfWork" computerName="LAPTOP-38DH13" duration="00:00:01.7578760" startTime="2026-06-05T12:59:36.7603691-04:00" endTime="2026-06-05T12:59:38.5182442-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4422e0f9-2fdd-49a7-9a21-2df5bd93a7b0" />
+    <UnitTestResult executionId="2820ddff-4f8b-4902-b95e-ff9423b73624" testId="f1b6d322-b13f-5c34-4a9c-007fd8983c8a" testName="ContactForm_RequiredFields_AreEnforcedByMarkup" computerName="LAPTOP-38DH13" duration="00:00:01.7761580" startTime="2026-06-05T12:59:40.5162661-04:00" endTime="2026-06-05T12:59:42.2924237-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2820ddff-4f8b-4902-b95e-ff9423b73624" />
+    <UnitTestResult executionId="a053bcdf-4e15-4bf7-a8f6-981f8ebe809f" testId="21165e36-e74e-1405-8d13-06547b8373d6" testName="HeroSection_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.6688720" startTime="2026-06-05T12:59:35.0914729-04:00" endTime="2026-06-05T12:59:36.7603442-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a053bcdf-4e15-4bf7-a8f6-981f8ebe809f" />
+    <UnitTestResult executionId="55fda3ac-fa31-4836-b065-97bcaf13d9a3" testId="9176e346-a575-bfab-122c-589babf28b50" testName="ProjectsSection_IsVisible" computerName="LAPTOP-38DH13" duration="00:00:01.7595440" startTime="2026-06-05T12:59:55.1667158-04:00" endTime="2026-06-05T12:59:56.9262594-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="55fda3ac-fa31-4836-b065-97bcaf13d9a3" />
+    <UnitTestResult executionId="6e9dda2c-4585-43b6-b3ec-f6b541dfe0ba" testId="2abab9f8-8806-5b54-4625-6a94fdb2754d" testName="Form_AcceptsInput" computerName="LAPTOP-38DH13" duration="00:00:01.8032270" startTime="2026-06-05T12:59:18.9927216-04:00" endTime="2026-06-05T12:59:20.7959476-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e9dda2c-4585-43b6-b3ec-f6b541dfe0ba" />
+    <UnitTestResult executionId="43cb13e5-f056-454f-aa08-ed06bbe4f7dd" testId="e13901b2-c3e1-f394-1f2c-b95b6ff34357" testName="Project1_IsPrintScanRegressionFramework" computerName="LAPTOP-38DH13" duration="00:00:02.4713450" startTime="2026-06-05T12:59:45.8121307-04:00" endTime="2026-06-05T12:59:48.2834755-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="43cb13e5-f056-454f-aa08-ed06bbe4f7dd" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="StatusBar_ShowsHostname" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="6fcd36ea-27dc-7997-4048-19f07d22f086">
+      <Execution id="2a17d039-53b7-4f5d-936a-dbfd9faae43a" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.StatusBarTests" name="StatusBar_ShowsHostname" />
+    </UnitTest>
+    <UnitTest name="AfterNavigatingToContact_UrlDoesNotContain_Projects" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="5939e202-901b-6660-b2f7-4de65560a16b">
+      <Execution id="41e517d2-b33a-421f-b885-0d4229750fe2" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NegativeTests" name="AfterNavigatingToContact_UrlDoesNotContain_Projects" />
+    </UnitTest>
+    <UnitTest name="StatusBar_AllSegmentsDisplayed" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="979ccbc7-dc8b-b6f5-dc64-3940a42c5bb5">
+      <Execution id="c2a78ec8-b8a4-4b3a-b012-87aa4478b65b" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.StatusBarTests" name="StatusBar_AllSegmentsDisplayed" />
+    </UnitTest>
+    <UnitTest name="Form_AcceptsInput" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="2abab9f8-8806-5b54-4625-6a94fdb2754d">
+      <Execution id="6e9dda2c-4585-43b6-b3ec-f6b541dfe0ba" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ContactTests" name="Form_AcceptsInput" />
+    </UnitTest>
+    <UnitTest name="ClickingViewProjects_NavigatesToProjectsAnchor" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="9b00cf02-0405-ef25-dd6b-74cfca961a9a">
+      <Execution id="dbe18017-427b-4328-82ea-606aedad3094" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.HeroTests" name="ClickingViewProjects_NavigatesToProjectsAnchor" />
+    </UnitTest>
+    <UnitTest name="StatusBar_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="f196aad4-7f91-93e2-90f6-a9c9c8daff12">
+      <Execution id="06ff60ec-c69f-4f5c-a116-9b5fc5341df7" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.StatusBarTests" name="StatusBar_IsVisible" />
+    </UnitTest>
+    <UnitTest name="Project4_IsLeadGenAndLive" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="83a387b1-6e8f-ac28-6240-ade49a760bde">
+      <Execution id="763b0adb-3b03-4ab7-b096-42bff649fb5f" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ProjectsTests" name="Project4_IsLeadGenAndLive" />
+    </UnitTest>
+    <UnitTest name="Project1_IsPrintScanRegressionFramework" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="e13901b2-c3e1-f394-1f2c-b95b6ff34357">
+      <Execution id="43cb13e5-f056-454f-aa08-ed06bbe4f7dd" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ProjectsTests" name="Project1_IsPrintScanRegressionFramework" />
+    </UnitTest>
+    <UnitTest name="Form_Submission_ShowsSuccessState" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="393cadf2-f9dc-c6bb-c350-98ee3d3099dd">
+      <Execution id="ccfe1cbe-4e36-40d7-ba16-54b5b8bcd49d" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ContactTests" name="Form_Submission_ShowsSuccessState" />
+    </UnitTest>
+    <UnitTest name="StatusCard_PopulatesWithLiveData" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="c58951b1-17b2-924e-2e17-0bc590c9cb57">
+      <Execution id="b7166ff6-c5eb-45de-8400-e5d71043cf6c" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.StatusCardTests" name="StatusCard_PopulatesWithLiveData" />
+    </UnitTest>
+    <UnitTest name="Project3_IsSeleniumFrameworkAndPassing" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="6de6b794-9a4d-f4db-e632-d46dc6da2de6">
+      <Execution id="2fb097ca-2dff-417c-b684-ef53b1900d9e" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ProjectsTests" name="Project3_IsSeleniumFrameworkAndPassing" />
+    </UnitTest>
+    <UnitTest name="Footer_ShowsBrandLine" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="28c55bcf-2f17-d255-1a4d-ebaf37130aee">
+      <Execution id="23e92a48-87d3-4746-8cab-95e778fa3203" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.FooterTests" name="Footer_ShowsBrandLine" />
+    </UnitTest>
+    <UnitTest name="Page_HasNo_SkillsOrResumeLinks" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="42ebe71d-928d-06df-d7fe-957b711b0d71">
+      <Execution id="59474f60-5d40-49b0-99fb-3f23c48db863" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NegativeTests" name="Page_HasNo_SkillsOrResumeLinks" />
+    </UnitTest>
+    <UnitTest name="AllProjectCards_AreVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="37967c48-ebb0-8043-4b2c-99218da5b6fe">
+      <Execution id="5bf04735-7ee9-4a20-b710-55a786d3f22e" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ProjectsTests" name="AllProjectCards_AreVisible" />
+    </UnitTest>
+    <UnitTest name="StatusBar_ShowsBranchName" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="90bd079e-a469-2897-6917-c5c0e5a83c62">
+      <Execution id="3ca5de1c-e9a7-46a8-b063-8b3bfe6fed60" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.StatusBarTests" name="StatusBar_ShowsBranchName" />
+    </UnitTest>
+    <UnitTest name="About_SecondParagraph_DescribesLiveCiCdLink" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="bc7e16f0-9a04-3729-0222-5bc7a9040623">
+      <Execution id="699c3dc8-56e3-479b-ac1d-6244fff3f0bb" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.AboutTests" name="About_SecondParagraph_DescribesLiveCiCdLink" />
+    </UnitTest>
+    <UnitTest name="ProjectTitles_AreUnique" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="423e3903-3d03-e108-4702-5a97cdbd3715">
+      <Execution id="19e3fe8b-a9e5-4066-a65d-e4a61c736c4f" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NegativeTests" name="ProjectTitles_AreUnique" />
+    </UnitTest>
+    <UnitTest name="EachProject_HasCompleteContent" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="cce5bebd-a088-c6c9-d14d-cd1df11006c9">
+      <Execution id="06bf0a0e-f746-4f20-9b79-c151e3e5d0db" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ProjectsTests" name="EachProject_HasCompleteContent" />
+    </UnitTest>
+    <UnitTest name="HeroName_ContainsLoganGarbacki" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="b8189719-2894-b418-cabe-f0669b07e6b3">
+      <Execution id="de48d02f-a72d-4f68-b7ab-f8fef5aed45f" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.HeroTests" name="HeroName_ContainsLoganGarbacki" />
+    </UnitTest>
+    <UnitTest name="StatusCard_CommitOrFallbackVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="e2cf2421-a076-ac0f-2550-86e88a9b0555">
+      <Execution id="3a860ddf-d8e9-4490-93ab-e0badc4d8558" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.StatusCardTests" name="StatusCard_CommitOrFallbackVisible" />
+    </UnitTest>
+    <UnitTest name="NavName_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="983cdfa1-d6a6-f1f8-8476-625598e8278b">
+      <Execution id="01b80c6a-0f82-4a7f-8aa6-f77bdf2767e3" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NavbarTests" name="NavName_IsVisible" />
+    </UnitTest>
+    <UnitTest name="AboutSection_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="513a4e95-647d-f366-6434-df6d5c1c099a">
+      <Execution id="f4eeb2a3-d19b-4799-a708-a47291d2b416" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.AboutTests" name="AboutSection_IsVisible" />
+    </UnitTest>
+    <UnitTest name="ContactEmail_IsNotPlaceholder" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="6ca090aa-d57d-f805-5a9e-a8d1c541094d">
+      <Execution id="5d9a0b09-2a92-4a0f-b504-c013a87c4917" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NegativeTests" name="ContactEmail_IsNotPlaceholder" />
+    </UnitTest>
+    <UnitTest name="StatusCard_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="69ed24aa-f842-a861-597d-f12e698facf0">
+      <Execution id="126e3681-0c20-4259-a321-09aad7a617c4" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.StatusCardTests" name="StatusCard_IsVisible" />
+    </UnitTest>
+    <UnitTest name="Visitor_Flows_From_Home_Through_Projects_About_To_Contact" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="a5dc8aff-491d-0db0-561b-086d919f4b89">
+      <Execution id="1540c903-f656-4303-883e-80d840e3fdde" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.UserFlowTests" name="Visitor_Flows_From_Home_Through_Projects_About_To_Contact" />
+    </UnitTest>
+    <UnitTest name="Navigation_Works_For_All_Sections(About)" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="6543acef-f115-f76f-0918-29ebbe2b0455">
+      <Execution id="a6dd72e0-e85c-402a-942e-e52a9fa6f5c8" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NavbarTests" name="Navigation_Works_For_All_Sections(About)" />
+    </UnitTest>
+    <UnitTest name="About_FirstParagraph_DescribesEngineerRole" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="70d05771-12d7-2d73-446b-5d30e9a284b6">
+      <Execution id="66eaa0fb-0e91-41a2-8072-73a6308d315c" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.AboutTests" name="About_FirstParagraph_DescribesEngineerRole" />
+    </UnitTest>
+    <UnitTest name="Navbar_HasNo_HeroLink" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="10ea20f5-32d7-1b9a-1433-97530790291a">
+      <Execution id="028f3256-03cb-4310-968a-a59e29558173" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NegativeTests" name="Navbar_HasNo_HeroLink" />
+    </UnitTest>
+    <UnitTest name="ContactForm_RequiredFields_AreEnforcedByMarkup" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="f1b6d322-b13f-5c34-4a9c-007fd8983c8a">
+      <Execution id="2820ddff-4f8b-4902-b95e-ff9423b73624" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NegativeTests" name="ContactForm_RequiredFields_AreEnforcedByMarkup" />
+    </UnitTest>
+    <UnitTest name="ContactSection_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="9cd8717c-e297-6751-a2d7-35425e9bbeae">
+      <Execution id="46e2a6be-7288-4d51-8df6-6653211d1e89" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ContactTests" name="ContactSection_IsVisible" />
+    </UnitTest>
+    <UnitTest name="Footer_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="6a4d3d50-21b6-438c-1967-52b8e36e8b9e">
+      <Execution id="3671ddb7-ca0e-4d04-9303-19f6a4c8eace" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.FooterTests" name="Footer_IsVisible" />
+    </UnitTest>
+    <UnitTest name="About_LoadsCorrectly" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="e35c2672-fe40-3336-4219-2b9090efe574">
+      <Execution id="dfb2e9dd-b064-49ab-9068-2ca1da55fcd8" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.AboutTests" name="About_LoadsCorrectly" />
+    </UnitTest>
+    <UnitTest name="StatusCard_AllMetricsRendered" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="6e4c6548-77f2-b714-7f12-b45b5c8ebcd2">
+      <Execution id="b107fab2-81bc-4e3b-b319-5a2314eafd0e" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.StatusCardTests" name="StatusCard_AllMetricsRendered" />
+    </UnitTest>
+    <UnitTest name="HeroLabel_ContainsRoleAndLocation" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="1b74d486-5b49-9219-a8c1-66c89e4d816a">
+      <Execution id="61be66e8-9d24-455c-804c-7267f9ccd2dc" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.HeroTests" name="HeroLabel_ContainsRoleAndLocation" />
+    </UnitTest>
+    <UnitTest name="Nav_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="d6b5d824-faac-9042-d7f6-5cfddc411b7b">
+      <Execution id="d2202c8b-8fdc-48cf-9d78-8e2e17b03c18" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NavbarTests" name="Nav_IsVisible" />
+    </UnitTest>
+    <UnitTest name="Navigation_Works_For_All_Sections(Projects)" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="0052f1c8-98e5-d2af-7f51-aee19f9008b3">
+      <Execution id="25026f9d-2136-4e0a-8154-ba3d0b0661c9" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NavbarTests" name="Navigation_Works_For_All_Sections(Projects)" />
+    </UnitTest>
+    <UnitTest name="NavName_ShowsLogan" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="e282fea2-7cf0-637d-0171-9ea3995667d4">
+      <Execution id="0b46964b-1e5a-4494-b7b9-19f408be3f00" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NavbarTests" name="NavName_ShowsLogan" />
+    </UnitTest>
+    <UnitTest name="Project2_IsPrintScanLocationSearchAndLive" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="34f06627-6461-8978-bbcf-7c73f769fa18">
+      <Execution id="42cf8115-69f7-40c2-ad10-46f8bef9b24e" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ProjectsTests" name="Project2_IsPrintScanLocationSearchAndLive" />
+    </UnitTest>
+    <UnitTest name="ContactForm_LoadsAllInputs" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="bc4a7984-83ec-bc3f-4722-c87e1d8c8bf7">
+      <Execution id="29465b3e-e5cc-44f4-82e3-9bbac2f37543" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ContactTests" name="ContactForm_LoadsAllInputs" />
+    </UnitTest>
+    <UnitTest name="ProjectsSection_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="9176e346-a575-bfab-122c-589babf28b50">
+      <Execution id="55fda3ac-fa31-4836-b065-97bcaf13d9a3" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ProjectsTests" name="ProjectsSection_IsVisible" />
+    </UnitTest>
+    <UnitTest name="Navigation_Works_For_All_Sections(Contact)" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="d5bf33fa-0cfe-1dc2-6e8e-8b91d4643421">
+      <Execution id="3d74b4df-7665-4ddd-a5a5-ff04d4f22a0b" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NavbarTests" name="Navigation_Works_For_All_Sections(Contact)" />
+    </UnitTest>
+    <UnitTest name="HeroName_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="2452b942-4c08-8af5-3c7c-d81d13b74745">
+      <Execution id="1cd940ae-e441-49b4-9c8d-04dd1afc6cad" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.HeroTests" name="HeroName_IsVisible" />
+    </UnitTest>
+    <UnitTest name="NavLinks_AreAllVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="408f64dd-d11f-133a-c04a-8dd3876c4ff3">
+      <Execution id="947a54b9-2d8c-42a6-8975-66b14347efc2" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.NavbarTests" name="NavLinks_AreAllVisible" />
+    </UnitTest>
+    <UnitTest name="ContactLinks_HaveCorrectHrefs" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="68346bfd-9d4d-8e7e-11f5-8576521329e0">
+      <Execution id="64e9b3ca-7f28-492f-a6f2-b20da62d4e5a" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.ContactTests" name="ContactLinks_HaveCorrectHrefs" />
+    </UnitTest>
+    <UnitTest name="HeroSummary_DescribesBreadthOfWork" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="21d512af-9f32-80fc-1fbb-e064d15d29f2">
+      <Execution id="4422e0f9-2fdd-49a7-9a21-2df5bd93a7b0" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.HeroTests" name="HeroSummary_DescribesBreadthOfWork" />
+    </UnitTest>
+    <UnitTest name="HeroSection_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="21165e36-e74e-1405-8d13-06547b8373d6">
+      <Execution id="a053bcdf-4e15-4bf7-a8f6-981f8ebe809f" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.HeroTests" name="HeroSection_IsVisible" />
+    </UnitTest>
+    <UnitTest name="ContactButton_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="0b691209-18d5-c456-712e-3b999b33cdb3">
+      <Execution id="f8932b6b-8a13-4f6b-99b3-6a783e67d077" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.HeroTests" name="ContactButton_IsVisible" />
+    </UnitTest>
+    <UnitTest name="ViewProjectsButton_IsVisible" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="d6fbc674-0d13-c605-46fc-8b31d7e98c69">
+      <Execution id="19975b7c-a12a-4f01-b400-c40dfaabf0f6" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.HeroTests" name="ViewProjectsButton_IsVisible" />
+    </UnitTest>
+    <UnitTest name="GetInTouchButton_LinksToContact" storage="c:\tmp\react-portfolio-selenium-tests\bin\debug\net8.0\seleniumtestframework.dll" id="1090ee04-dbc0-58c7-2ec5-6e7dd7f91dc8">
+      <Execution id="8c8a4096-e8b7-4da4-9401-ed633e117694" />
+      <TestMethod codeBase="C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll" adapterTypeName="executor://nunit3testexecutor/" className="SeleniumTestFramework.HeroTests" name="GetInTouchButton_LinksToContact" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="6de6b794-9a4d-f4db-e632-d46dc6da2de6" executionId="2fb097ca-2dff-417c-b684-ef53b1900d9e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9cd8717c-e297-6751-a2d7-35425e9bbeae" executionId="46e2a6be-7288-4d51-8df6-6653211d1e89" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="513a4e95-647d-f366-6434-df6d5c1c099a" executionId="f4eeb2a3-d19b-4799-a708-a47291d2b416" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e2cf2421-a076-ac0f-2550-86e88a9b0555" executionId="3a860ddf-d8e9-4490-93ab-e0badc4d8558" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b8189719-2894-b418-cabe-f0669b07e6b3" executionId="de48d02f-a72d-4f68-b7ab-f8fef5aed45f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6a4d3d50-21b6-438c-1967-52b8e36e8b9e" executionId="3671ddb7-ca0e-4d04-9303-19f6a4c8eace" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d6fbc674-0d13-c605-46fc-8b31d7e98c69" executionId="19975b7c-a12a-4f01-b400-c40dfaabf0f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d6b5d824-faac-9042-d7f6-5cfddc411b7b" executionId="d2202c8b-8fdc-48cf-9d78-8e2e17b03c18" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="90bd079e-a469-2897-6917-c5c0e5a83c62" executionId="3ca5de1c-e9a7-46a8-b063-8b3bfe6fed60" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="69ed24aa-f842-a861-597d-f12e698facf0" executionId="126e3681-0c20-4259-a321-09aad7a617c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ca090aa-d57d-f805-5a9e-a8d1c541094d" executionId="5d9a0b09-2a92-4a0f-b504-c013a87c4917" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6543acef-f115-f76f-0918-29ebbe2b0455" executionId="a6dd72e0-e85c-402a-942e-e52a9fa6f5c8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e35c2672-fe40-3336-4219-2b9090efe574" executionId="dfb2e9dd-b064-49ab-9068-2ca1da55fcd8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="42ebe71d-928d-06df-d7fe-957b711b0d71" executionId="59474f60-5d40-49b0-99fb-3f23c48db863" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="34f06627-6461-8978-bbcf-7c73f769fa18" executionId="42cf8115-69f7-40c2-ad10-46f8bef9b24e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f196aad4-7f91-93e2-90f6-a9c9c8daff12" executionId="06ff60ec-c69f-4f5c-a116-9b5fc5341df7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e4c6548-77f2-b714-7f12-b45b5c8ebcd2" executionId="b107fab2-81bc-4e3b-b319-5a2314eafd0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cce5bebd-a088-c6c9-d14d-cd1df11006c9" executionId="06bf0a0e-f746-4f20-9b79-c151e3e5d0db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2452b942-4c08-8af5-3c7c-d81d13b74745" executionId="1cd940ae-e441-49b4-9c8d-04dd1afc6cad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="10ea20f5-32d7-1b9a-1433-97530790291a" executionId="028f3256-03cb-4310-968a-a59e29558173" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5bf33fa-0cfe-1dc2-6e8e-8b91d4643421" executionId="3d74b4df-7665-4ddd-a5a5-ff04d4f22a0b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6fcd36ea-27dc-7997-4048-19f07d22f086" executionId="2a17d039-53b7-4f5d-936a-dbfd9faae43a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0b691209-18d5-c456-712e-3b999b33cdb3" executionId="f8932b6b-8a13-4f6b-99b3-6a783e67d077" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="979ccbc7-dc8b-b6f5-dc64-3940a42c5bb5" executionId="c2a78ec8-b8a4-4b3a-b012-87aa4478b65b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc4a7984-83ec-bc3f-4722-c87e1d8c8bf7" executionId="29465b3e-e5cc-44f4-82e3-9bbac2f37543" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="28c55bcf-2f17-d255-1a4d-ebaf37130aee" executionId="23e92a48-87d3-4746-8cab-95e778fa3203" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="393cadf2-f9dc-c6bb-c350-98ee3d3099dd" executionId="ccfe1cbe-4e36-40d7-ba16-54b5b8bcd49d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="983cdfa1-d6a6-f1f8-8476-625598e8278b" executionId="01b80c6a-0f82-4a7f-8aa6-f77bdf2767e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="408f64dd-d11f-133a-c04a-8dd3876c4ff3" executionId="947a54b9-2d8c-42a6-8975-66b14347efc2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a5dc8aff-491d-0db0-561b-086d919f4b89" executionId="1540c903-f656-4303-883e-80d840e3fdde" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc7e16f0-9a04-3729-0222-5bc7a9040623" executionId="699c3dc8-56e3-479b-ac1d-6244fff3f0bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0052f1c8-98e5-d2af-7f51-aee19f9008b3" executionId="25026f9d-2136-4e0a-8154-ba3d0b0661c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b74d486-5b49-9219-a8c1-66c89e4d816a" executionId="61be66e8-9d24-455c-804c-7267f9ccd2dc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="68346bfd-9d4d-8e7e-11f5-8576521329e0" executionId="64e9b3ca-7f28-492f-a6f2-b20da62d4e5a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9b00cf02-0405-ef25-dd6b-74cfca961a9a" executionId="dbe18017-427b-4328-82ea-606aedad3094" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c58951b1-17b2-924e-2e17-0bc590c9cb57" executionId="b7166ff6-c5eb-45de-8400-e5d71043cf6c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5939e202-901b-6660-b2f7-4de65560a16b" executionId="41e517d2-b33a-421f-b885-0d4229750fe2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37967c48-ebb0-8043-4b2c-99218da5b6fe" executionId="5bf04735-7ee9-4a20-b710-55a786d3f22e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="423e3903-3d03-e108-4702-5a97cdbd3715" executionId="19e3fe8b-a9e5-4066-a65d-e4a61c736c4f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83a387b1-6e8f-ac28-6240-ade49a760bde" executionId="763b0adb-3b03-4ab7-b096-42bff649fb5f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="70d05771-12d7-2d73-446b-5d30e9a284b6" executionId="66eaa0fb-0e91-41a2-8072-73a6308d315c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e282fea2-7cf0-637d-0171-9ea3995667d4" executionId="0b46964b-1e5a-4494-b7b9-19f408be3f00" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1090ee04-dbc0-58c7-2ec5-6e7dd7f91dc8" executionId="8c8a4096-e8b7-4da4-9401-ed633e117694" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21d512af-9f32-80fc-1fbb-e064d15d29f2" executionId="4422e0f9-2fdd-49a7-9a21-2df5bd93a7b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f1b6d322-b13f-5c34-4a9c-007fd8983c8a" executionId="2820ddff-4f8b-4902-b95e-ff9423b73624" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="21165e36-e74e-1405-8d13-06547b8373d6" executionId="a053bcdf-4e15-4bf7-a8f6-981f8ebe809f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9176e346-a575-bfab-122c-589babf28b50" executionId="55fda3ac-fa31-4836-b065-97bcaf13d9a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2abab9f8-8806-5b54-4625-6a94fdb2754d" executionId="6e9dda2c-4585-43b6-b3ec-f6b541dfe0ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e13901b2-c3e1-f394-1f2c-b95b6ff34357" executionId="43cb13e5-f056-454f-aa08-ed06bbe4f7dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="49" executed="49" passed="49" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 4.5.0.0: Test execution started&#xD;
+Running all tests in C:\tmp\react-portfolio-selenium-tests\bin\Debug\net8.0\SeleniumTestFramework.dll&#xD;
+   NUnit3TestExecutor discovered 49 of 49 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+NUnit Adapter 4.5.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
