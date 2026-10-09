@@ -1,73 +1,54 @@
-# Selenium UI Test Automation Framework (C# / NUnit)
+# Selenium UI Test Framework (C# / NUnit)
 
-I run my portfolio like a production app — this framework is the test suite that keeps it honest.
+The test suite for my portfolio site, [logangarbacki.dev](https://logangarbacki.dev). It runs against the live site and publishes the results as a public Allure report.
 
-👉 https://logangarbacki.dev
-📊 [Live Allure Report](https://logangarbacki.github.io/react-portfolio-selenium-tests/)
+- Live report: https://logangarbacki.github.io/react-portfolio-selenium-tests/
+- Site source: https://github.com/logangarbacki/react-portfolio-website
 
----
+## Coverage
 
-## ⚙️ Real problems solved
+49 test runs across every section of the site: status bar, navbar, hero, CI status card, about, projects, contact, and footer.
 
-### Scroll-reveal (IntersectionObserver)
-Elements below the fold animate in via IntersectionObserver. Default visibility checks would pass even when elements were off-screen — a naive `FindElement` immediately times out.
+| Category | Runs | What it checks |
+|---|---|---|
+| Smoke | 21 | Sections and key elements render |
+| Regression | 21 | Content, links, and navigation behave correctly |
+| Negative | 6 | Removed sections stay removed; no placeholder links or emails |
+| E2E | 1 | A full visit from the hero through to a submitted contact form |
 
-Fix: `DriverUtils.Find` scrolls the element into view inside the wait loop so the observer fires before the visibility check runs.
+## Problems I had to solve
 
-### JS `innerText` fallback
-The hero title uses a CSS `color: transparent` animation — Selenium's `.Text` returns empty.
+- **Content that appears on scroll.** Sections fade in with IntersectionObserver, so anything below the fold isn't visible until it's scrolled to. `DriverUtils.Find` scrolls each element into view inside the wait, so the observer fires before the visibility check runs.
+- **Animated hero text.** The hero name animates in with transparent text, so Selenium's `.Text` came back empty. `DriverUtils.GetInnerText` reads `innerText` through JavaScript instead.
+- **The contact form.** The suite submits the real form with `?test-form=1`, which makes the site skip the actual email send, so CI can test the whole flow without spamming my inbox.
 
-Fix: `DriverUtils.GetInnerText` bypasses this via JavaScript `innerText`.
+## How it runs
 
-### Parallel execution
-Fixtures run in parallel (`ParallelScope.Fixtures`) with `LevelOfParallelism(2)` — balances speed against CI resource constraints.
+GitHub Actions runs the suite on a Windows runner with headless Chrome:
 
----
+- on every push to `main` in this repo
+- on every push to the site repo, through `repository_dispatch`
+- nightly
+- on demand
 
-## 🧪 Test coverage
+Fixtures run in parallel, two at a time. Failed tests attach a screenshot, and each run deploys an Allure report with history to GitHub Pages.
 
-**46 tests** across 4 categories — covering 7 SPA sections: Navbar, Hero, About, Projects, Skills, Resume, Contact
+## Stack
 
-| Category | What it covers |
-|----------|----------------|
-| **Negative** *(often skipped)* | Ensures bad states don't exist — broken links, placeholders, duplicate data |
-| **Smoke** | Element visibility, page load, critical path checks |
-| **Regression** | Content accuracy, navigation behavior, link validation |
-| **E2E** | Full visitor flow: Hero → Projects → About → Contact |
+C#, .NET 8, NUnit 3, Selenium WebDriver 4, Allure.NUnit, GitHub Actions.
 
----
-
-## 🧱 Stack
-
-- **C# + NUnit 3** — test structure and assertions
-- **Selenium WebDriver 4** — headless Chrome
-- **Page Object Model** — one class per section, selectors separated from logic
-- **DriverUtils** — custom scroll-in-view retry logic, JS text fallback
-- **Allure.NUnit** — structured reporting with suite/category breakdowns
-- **Screenshot on failure** — auto-captured and attached to the report
-
----
-
-## 🚀 CI/CD
-
-Runs automatically via **GitHub Actions** on:
-
-- Every push to `main`
-- Daily scheduled run (midnight UTC)
-- Portfolio deployment trigger (`repository_dispatch`)
-
-Allure report is generated and deployed to GitHub Pages after each run.
-
----
-
-## 📁 Project structure
+## Layout
 
 ```
-SeleniumTestFramework/
-├── Pages/          # Page Object classes (one per section)
-├── Tests/          # Test fixtures (Smoke, Regression, Negative, E2E)
-├── Utilities/      # DriverUtils, TestConfig
-├── Enums/          # NavSection enum
-└── .github/
-    └── workflows/  # GitHub Actions CI pipeline
+Pages/       Page objects, one per section
+Tests/       Test fixtures by section
+Utilities/   Driver setup, waits, and config
+Enums/       Navigation sections
+.github/     CI workflow
+```
+
+## Run it locally
+
+```
+dotnet test
 ```
