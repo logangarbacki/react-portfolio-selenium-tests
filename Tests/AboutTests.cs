@@ -25,8 +25,7 @@ namespace SeleniumTestFramework
                 Assert.That(_about.Section.Displayed, Is.True);
                 Assert.That(_about.FirstParagraph.Displayed, Is.True);
                 Assert.That(_about.SecondParagraph.Displayed, Is.True);
-                Assert.That(_about.AgencyLink.GetAttribute("href"),
-                    Does.Contain("garbackidigital.com/work").IgnoreCase);
+                Assert.That(_about.ThirdParagraph.Displayed, Is.True);
             });
         }
 

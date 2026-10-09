@@ -31,7 +31,8 @@ namespace SeleniumTestFramework.Pages
         public IWebElement SeleniumAllureLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='project-3-allure']"));
         // PrintScan Location Search (card 2) → live page
         public IWebElement LocationSearchLiveLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='project-2-live']"));
-        // Lead Generation Tool (card 4) → live platform
-        public IWebElement LeadGenLiveLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='project-4-live']"));
+        // Lead Generation Tool (card 4) has no public link
+        public System.Collections.ObjectModel.ReadOnlyCollection<IWebElement> LeadGenLinks =>
+            ProjectCard(4).FindElements(By.CssSelector(".link-row a"));
     }
 }

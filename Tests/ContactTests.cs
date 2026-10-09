@@ -61,11 +61,9 @@ namespace SeleniumTestFramework
             _contact.Fill("Test User", "test@example.com", "Hello from Selenium");
             _contact.Submit();
 
-            // The mock submit waits ~700ms, renders the success block, then
-            // types out "POST /contact → ok" character-by-character (~540ms).
+            // The mock submit waits ~700ms, then renders the success block.
             var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
             wait.Until(d => _contact.SuccessVisible);
-            // Wait for the typewriter to finish — "ok" is the last fragment.
             wait.Until(d => _contact.SuccessBlock.Text.IndexOf("ok", StringComparison.OrdinalIgnoreCase) >= 0);
 
             var successText = _contact.SuccessBlock.Text;

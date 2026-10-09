@@ -61,21 +61,20 @@ namespace SeleniumTestFramework
         }
 
         [Test, Category("Regression")]
-        public void Project3_IsSeleniumFrameworkAndPassing()
+        public void Project3_IsSeleniumFrameworkWithLiveCi()
         {
             Assert.That(_projects.ProjectTitle(3).Text, Does.Contain("Selenium").IgnoreCase);
-            Assert.That(_projects.ProjectStatus(3).Text, Does.Contain("passing").IgnoreCase);
+            Assert.That(_projects.ProjectStatus(3).Text, Does.Contain("CI").IgnoreCase);
             Assert.That(_projects.SeleniumGithubLink.GetAttribute("href"),
                 Does.Contain("logangarbacki/react-portfolio-selenium-tests"));
         }
 
         [Test, Category("Regression")]
-        public void Project4_IsLeadGenAndLive()
+        public void Project4_IsLeadGenPersonalProject()
         {
             Assert.That(_projects.ProjectTitle(4).Text, Does.Contain("Lead Generation").IgnoreCase);
-            Assert.That(_projects.ProjectStatus(4).Text, Does.Contain("live").IgnoreCase);
-            Assert.That(_projects.LeadGenLiveLink.GetAttribute("href"),
-                Does.Contain("garbackidigital.com/platform").IgnoreCase);
+            Assert.That(_projects.ProjectStatus(4).Text, Does.Contain("personal project").IgnoreCase);
+            Assert.That(_projects.LeadGenLinks, Is.Empty, "Lead gen card should not link to a live app");
         }
     }
 }

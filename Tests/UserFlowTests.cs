@@ -41,7 +41,7 @@ namespace SeleniumTestFramework
             DriverUtils.WaitForUrlContains(Driver, "#projects");
             Assert.That(Driver.Url, Does.Contain("#projects"), "URL should update to #projects");
 
-            // Projects section visible with all three cards
+            // Projects section visible with all four cards
             Assert.That(_projects.Section.Displayed, Is.True, "Projects section should be visible");
             for (int i = 1; i <= 4; i++)
                 Assert.That(_projects.ProjectTitle(i).Text, Is.Not.Empty,
@@ -65,7 +65,6 @@ namespace SeleniumTestFramework
 
             var wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(5));
             wait.Until(d => _contact.SuccessVisible);
-            // The success line types out "POST /contact → ok" — wait for it to land.
             wait.Until(d => _contact.SuccessBlock.Text.IndexOf("ok", StringComparison.OrdinalIgnoreCase) >= 0);
 
             Assert.That(_contact.SuccessBlock.Text, Does.Contain("ok").IgnoreCase,
