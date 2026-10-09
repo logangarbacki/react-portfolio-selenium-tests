@@ -66,7 +66,7 @@ namespace SeleniumTestFramework
             var text = _hero.Summary.Text;
             Assert.Multiple(() =>
             {
-                Assert.That(text, Does.Contain("QA").IgnoreCase);
+                Assert.That(text, Does.Contain("test automation").IgnoreCase);
                 Assert.That(text, Does.Contain("Selenium").IgnoreCase);
                 Assert.That(text, Does.Contain("deploy").IgnoreCase);
             });
