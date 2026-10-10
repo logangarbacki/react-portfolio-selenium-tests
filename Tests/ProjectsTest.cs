@@ -22,7 +22,7 @@ namespace SeleniumTestFramework
         {
             Assert.Multiple(() =>
             {
-                for (int i = 1; i <= 4; i++)
+                for (int i = 1; i <= 5; i++)
                     Assert.That(_projects.ProjectCard(i).Displayed, Is.True, $"Project card {i} not visible");
             });
         }
@@ -32,7 +32,7 @@ namespace SeleniumTestFramework
         {
             Assert.Multiple(() =>
             {
-                for (int i = 1; i <= 4; i++)
+                for (int i = 1; i <= 5; i++)
                 {
                     Assert.That(_projects.ProjectTitle(i).Text, Is.Not.Empty,        $"Project {i} title is empty");
                     Assert.That(_projects.ProjectStatus(i).Text, Is.Not.Empty,       $"Project {i} status is empty");
@@ -75,6 +75,16 @@ namespace SeleniumTestFramework
             Assert.That(_projects.ProjectTitle(4).Text, Does.Contain("Lead Generation").IgnoreCase);
             Assert.That(_projects.ProjectStatus(4).Text, Does.Contain("personal project").IgnoreCase);
             Assert.That(_projects.LeadGenLinks, Is.Empty, "Lead gen card should not link to a live app");
+        }
+
+        [Test, Category("Regression")]
+        public void Project5_IsLittleLemonWithLiveAppAndCode()
+        {
+            Assert.That(_projects.ProjectTitle(5).Text, Does.Contain("Little Lemon").IgnoreCase);
+            Assert.That(_projects.ProjectStatus(5).Text, Does.Contain("live").IgnoreCase);
+            Assert.That(_projects.LittleLemonLiveLink.GetAttribute("href"), Does.Contain("vercel.app"));
+            Assert.That(_projects.LittleLemonGithubLink.GetAttribute("href"),
+                Does.Contain("logangarbacki/meta-front-end-developer-capstone"));
         }
     }
 }

@@ -7,12 +7,12 @@ The test suite for my portfolio site, [logangarbacki.dev](https://logangarbacki.
 
 ## Coverage
 
-48 test runs across every section of the site: navbar, header, CI status panel, about, skills, work, contact, and footer.
+49 test runs across every section of the site: navbar, header, CI status panel, about, skills, work, contact, and footer.
 
 | Category | Runs | What it checks |
 |---|---|---|
 | Smoke | 20 | Sections and key elements render |
-| Regression | 21 | Content, links, and navigation behave correctly |
+| Regression | 22 | Content, links, and navigation behave correctly |
 | Negative | 6 | Removed sections stay removed; no placeholder links or emails |
 | E2E | 1 | A full visit from the hero through to a submitted contact form |
 
