@@ -32,7 +32,7 @@ namespace SeleniumTestFramework
         private void SkipIfOffline(string badge)
         {
             if (badge.Equals("Offline", StringComparison.OrdinalIgnoreCase))
-                Assert.Inconclusive("GitHub API was unreachable, so run details aren't shown.");
+                Assert.Inconclusive("The latest run details couldn't be loaded, so they aren't shown.");
         }
 
         [Test, Category("Smoke")]
