@@ -10,11 +10,20 @@ on:
     - cron: '0 0 * * *'  # Daily at midnight UTC
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   run-selenium-tests:
     runs-on: windows-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout Selenium Tests Repo
@@ -36,17 +45,16 @@ jobs:
         run: dotnet test ./SeleniumTestFramework.csproj --logger "console;verbosity=normal"
         continue-on-error: true
 
-      - name: Fetch Allure history from gh-pages
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages
-        continue-on-error: true
-
-      - name: Copy history into results
+      # Pull trend history from the live report so the Allure graphs keep their history.
+      - name: Fetch Allure history from the published report
+        shell: pwsh
         run: |
-          if (Test-Path "gh-pages\history") {
-            Copy-Item -Recurse -Force "gh-pages\history" "bin\Debug\net8.0\allure-results\history"
+          $dest = "bin\Debug\net8.0\allure-results\history"
+          New-Item -ItemType Directory -Force $dest | Out-Null
+          foreach ($f in 'history.json','history-trend.json','duration-trend.json','categories-trend.json','retry-trend.json') {
+            try {
+              Invoke-WebRequest -Uri "https://logangarbacki.github.io/react-portfolio-selenium-tests/history/$f" -OutFile "$dest\$f" -ErrorAction Stop
+            } catch { Write-Host "No $f yet" }
           }
         continue-on-error: true
 
@@ -82,9 +90,15 @@ jobs:
           name: allure-report
           path: allure-report/
 
-      - name: Deploy Allure Report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      # Deploys straight to Pages from an artifact, so no commit lands on gh-pages.
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: allure-report
-          publish_branch: gh-pages
+          path: allure-report
+
+      - name: Deploy Allure Report to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
