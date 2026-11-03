@@ -37,9 +37,7 @@ namespace SeleniumTestFramework.Pages
         // Lead Generation Tool (card 4) has no public link
         public System.Collections.ObjectModel.ReadOnlyCollection<IWebElement> LeadGenLinks =>
             ProjectCard(4).FindElements(By.CssSelector(".link-row a"));
-        // Garbacki Digital (card 6) → two client sites and the business site
-        public IWebElement GarbackiClient1Link => DriverUtils.Find(_driver, By.CssSelector("[data-testid='project-6-client-1']"));
-        public IWebElement GarbackiClient2Link => DriverUtils.Find(_driver, By.CssSelector("[data-testid='project-6-client-2']"));
+        // Garbacki Digital (card 6) → the business site
         public IWebElement GarbackiSiteLink => DriverUtils.Find(_driver, By.CssSelector("[data-testid='project-6-site']"));
     }
 }

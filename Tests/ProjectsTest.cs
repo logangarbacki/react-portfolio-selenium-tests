@@ -88,12 +88,10 @@ namespace SeleniumTestFramework
         }
 
         [Test, Category("Regression")]
-        public void Project6_IsGarbackiDigitalWithClientSites()
+        public void Project6_IsGarbackiDigitalWithSiteLink()
         {
             Assert.That(_projects.ProjectTitle(6).Text, Does.Contain("Garbacki Digital").IgnoreCase);
             Assert.That(_projects.ProjectStatus(6).Text, Is.Not.Empty);
-            Assert.That(_projects.GarbackiClient1Link.GetAttribute("href"), Does.Contain("bedsandmasonry.com"));
-            Assert.That(_projects.GarbackiClient2Link.GetAttribute("href"), Does.Contain("houseoflucany.com"));
             Assert.That(_projects.GarbackiSiteLink.GetAttribute("href"), Does.Contain("garbackidigital.com"));
         }
     }
