@@ -7,7 +7,7 @@ The test suite for my portfolio site, [logangarbacki.dev](https://logangarbacki.
 
 ## Coverage
 
-49 test runs across every section of the site: navbar, header, CI status panel, about, skills, work, contact, and footer.
+50 test runs across every section of the site: navbar, header, CI status panel, about, skills, work, contact, and footer.
 
 | Category | Runs | What it checks |
 |---|---|---|

@@ -22,7 +22,7 @@ namespace SeleniumTestFramework
         {
             Assert.Multiple(() =>
             {
-                for (int i = 1; i <= 5; i++)
+                for (int i = 1; i <= 6; i++)
                     Assert.That(_projects.ProjectCard(i).Displayed, Is.True, $"Project card {i} not visible");
             });
         }
@@ -32,7 +32,7 @@ namespace SeleniumTestFramework
         {
             Assert.Multiple(() =>
             {
-                for (int i = 1; i <= 5; i++)
+                for (int i = 1; i <= 6; i++)
                 {
                     Assert.That(_projects.ProjectTitle(i).Text, Is.Not.Empty,        $"Project {i} title is empty");
                     Assert.That(_projects.ProjectStatus(i).Text, Is.Not.Empty,       $"Project {i} status is empty");
@@ -85,6 +85,16 @@ namespace SeleniumTestFramework
             Assert.That(_projects.LittleLemonLiveLink.GetAttribute("href"), Does.Contain("vercel.app"));
             Assert.That(_projects.LittleLemonGithubLink.GetAttribute("href"),
                 Does.Contain("logangarbacki/meta-front-end-developer-capstone"));
+        }
+
+        [Test, Category("Regression")]
+        public void Project6_IsGarbackiDigitalWithClientSites()
+        {
+            Assert.That(_projects.ProjectTitle(6).Text, Does.Contain("Garbacki Digital").IgnoreCase);
+            Assert.That(_projects.ProjectStatus(6).Text, Is.Not.Empty);
+            Assert.That(_projects.GarbackiClient1Link.GetAttribute("href"), Does.Contain("bedsandmasonry.com"));
+            Assert.That(_projects.GarbackiClient2Link.GetAttribute("href"), Does.Contain("houseoflucany.com"));
+            Assert.That(_projects.GarbackiSiteLink.GetAttribute("href"), Does.Contain("garbackidigital.com"));
         }
     }
 }
